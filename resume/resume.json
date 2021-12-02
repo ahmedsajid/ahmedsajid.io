@@ -1,0 +1,261 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "meta": {
+    "theme": "stackoverflow",
+    "canonical": "https://raw.githubusercontent.com/ahmedsajid/resume/main/resume.json",
+    "version": "v1.1.4",
+    "lastModified": "2021-11-30T22:00:00"
+  },
+  "basics": {
+    "name": "Ahmed Sajid",
+    "label": "DevOps | CKA & CKAD",
+    "picture": "",
+    "email": "ahmed4343@hotmail.com",
+    "phone": "",
+    "website": "https://ahmedsajid.github.io",
+    "summary": "Certified Kubernetes Application Developer, Certified Kubernetes Administrator and Red Hat Certified Engineer with 9 years of experience in IT industry, working with Web Servers, Mail Systems, High Performance Computing Clusters and Blockchain, with passion for automation and Open Source.",
+    "location": {
+      "city": "Toronto",
+      "countryCode": "CA",
+      "region": "Ontario"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "ahsajid",
+        "url": "https://www.linkedin.com/in/ahsajid"
+      },
+      {
+        "network": "GitHub",
+        "username": "ahmedsajid",
+        "url": "https://github.com/ahmedsajid"
+      }
+    ]
+  },
+  "work": [
+    {
+      "summary": "SecureKey is an Identity and authentication provider with Canadian Federal and Provincial Governments, other Fintechs as clients and partners.\nStarted working as L3 Support Team Lead getting promoted to Manager role within few months.",
+      "position": "Manager, Verified.Me Support",
+      "startDate": "2019-05-31",
+      "highlights": [
+        "Part of planning team for releases and consortium wide upgrades.",
+        "Technical coordination with partners including Financial Institutions and Government entities.",
+        "Wrote and maintained Infrastructure as a Code repositories for automated deployments."
+      ],
+      "name": "SecureKey Technologies Inc"
+    },
+    {
+      "endDate": "2019-05-31",
+      "summary": "SecureKey is an Identity and authentication provider with Canadian Federal and Provincial Governments, other Fintechs as clients and partners.\nWrote Infrastructure-as-Code automating day-to-day tasks as well as writing deployments for SecureKey's Blockchain based identity sharing platform, Verified.Me. Worked as a key engineer on the project coming up with deployments for several SecureKey provided services.",
+      "position": "DevOps Engineer",
+      "startDate": "2016-10-31",
+      "highlights": [
+        "Wrote and maintained Infrastructure as a Code repositories for automated deployments.",
+        "Built and ship container images.",
+        "Escalation point for Operations team for L2/L3 Support.",
+        "Implemented and also supported production changes in out-of-hours maintenance windows."
+      ],
+      "name": "SecureKey Technologies Inc"
+    },
+    {
+      "endDate": "2016-10-31",
+      "summary": "SecureKey is an Identity and authentication provider with Canadian Federal and Provincial Governments, other Fintechs as clients and partners.\nJoined as a Systems Administrator Supporting SecureKey's Government Sign-in by Verified.Me Service. After recognizing my skills and passion for automation, was offered the role of DevOps Engineer and joined the Engineering team after 4 months being part of Production Support Team.",
+      "position": "Systems Administrator",
+      "startDate": "2016-06-06",
+      "highlights": [
+        "Day-to-Day operations and maintenance of the server infrastructure supporting cloud services with a focus on Red Hat Linux, JAVA application servers, MySQL and VMWare ESX.",
+        "Implemented production changes in out-of-hours maintenance windows",
+        "On-call for critical incident support on a rotational basis",
+        "Provided input to post implementation reviews and RCAs",
+        "Managed of issues using an ITIL-compliant ticketing system",
+        "Vendor Management"
+      ],
+      "name": "SecureKey Technologies Inc"
+    },
+    {
+      "endDate": "2016-03-31",
+      "summary": "Red Hat Advanced Partner and AWS Standard Consulting Partner that focuses on Linux based solutions for enterprises.",
+      "position": "Linux Systems Engineer",
+      "startDate": "2015-08-31",
+      "highlights": [
+        "Installed and provided support for all Red Hat products such as Red Hat Enterprise Linux, Red Hat Satellite, Red Hat High Availability Clusters.",
+        "Meet with potential clients to discuss their IT enterprise needs.",
+        "Provided 24/7 on-call support to clients on daily basis.",
+        "Performed remote troubleshooting to effectively resolve technical issues faced by the clients.",
+        "Wrote project specification and technical documentation."
+      ],
+      "name": "Integra Technologies FZE"
+    },
+    {
+      "endDate": "2015-07-31",
+      "position": "Linux System Administrator",
+      "startDate": "2012-07-31",
+      "summary": "One of Europe’s largest multidisciplinary research organisations.",
+      "highlights": [
+        "Administered CPU and GPU RHEL based compute clusters for UK academia.",
+        "Handled complex support queries on daily basis.",
+        "Liaised with vendors for hardware replacements.",
+        "Provisioned physical and virtual machines for production.",
+        "Worked as part of a team administering large production environment."
+      ],
+      "name": "Science and Technology Facilities Council"
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Coventry University",
+      "area": "Communications Engineering",
+      "studyType": "Bachelor of Engineering",
+      "startDate": "2008-09-01",
+      "endDate": "2012-07-01"
+    }
+  ],
+  "awards": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "IAC and Configuration Management Tools",
+      "level": "",
+      "keywords": [
+        "Ansible",
+        "Terraform",
+        "Pulumi"
+      ]
+    },
+    {
+      "name": "Version Control",
+      "level": "",
+      "keywords": [
+        "Git",
+        "GitHub",
+        "GitLab",
+        "SVN"
+      ]
+    },
+    {
+      "name": "Cloud",
+      "level": "",
+      "keywords": [
+        "AWS",
+        "DigitalOcean"
+      ]
+    },
+    {
+      "name": "Container",
+      "level": "",
+      "keywords": [
+        "Docker",
+        "Kubernetes"
+      ]
+    },
+    {
+      "name": "Scripting",
+      "level": "",
+      "keywords": [
+        "BASH",
+        "Python"
+      ]
+    },
+    {
+      "name": "CI and Build Tools",
+      "level": "",
+      "keywords": [
+        "Jenkins",
+        "Github Actions",
+        "Bazel",
+        "Make/CMake"
+      ]
+    },
+    {
+      "name": "Linux Operating System",
+      "level": "",
+      "keywords": [
+        "RHEL",
+        "CentOS",
+        "Ubuntu Desktop",
+        "Alpine Linux"
+      ]
+    },
+    {
+      "name": "Databases",
+      "level": "",
+      "keywords": [
+        "MySQL"
+      ]
+    },
+    {
+      "name": "Web Server",
+      "level": "",
+      "keywords": [
+        "NGiNX",
+        "Apache HTTPD"
+      ]
+    },
+    {
+      "name": "Security",
+      "level": "",
+      "keywords": [
+        "OpenSSL",
+        "PKI",
+        "SSL/TLS Certificates"
+      ]
+    },
+    {
+      "name": "Collaboration Tools",
+      "level": "",
+      "keywords": [
+        "JIRA",
+        "Confluence"
+      ]
+    },
+    {
+      "name": "Logging & Monitoring",
+      "level": "",
+      "keywords": [
+        "Graylog",
+        "Splunk",
+        "Sensu",
+        "Nagios/Icinga",
+        "LibreNMS"
+      ]
+    },
+    {
+      "name": "Blockchain",
+      "level": "",
+      "keywords": [
+        "Hyperledger Fabric"
+      ]
+    },
+    {
+      "name": "Build Repositories",
+      "level": "",
+      "keywords": [
+        "Jfrog Artifactory",
+        "Nexus"
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certified Kubernetes Administrator",
+      "date": "2021-07-22",
+      "issuer": "CNCF"
+    },
+    {
+      "name": "Certified Kubernetes Application Developer",
+      "date": "2021-07-22",
+      "issuer": "CNCF"
+    },
+    {
+      "name": "Red Hat Certified Engineer",
+      "date": "2014-11-07",
+      "issuer": "Red Hat"
+    },
+    {
+      "name": "Red Hat Certified Systems Administrator",
+      "date": "2014-11-07",
+      "issuer": "Red Hat"
+    }
+  ]
+}

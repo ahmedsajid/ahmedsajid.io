@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "validate": "resume validate",
+    "build:pdf": "resume export --theme stackoverflow resume.pdf",
+    "build:html": "resume export --theme stackoverflow resume.html"
+  },
+  "devDependencies": {
+    "resume-cli": "^3.0.5",
+    "jsonresume-theme-stackoverflow": "https://github.com/ahmedsajid/jsonresume-theme-stackoverflow.git#12c7b62ed78bd41828b044b332802fbff315169b"
+  }
+}
