@@ -36,6 +36,6 @@ jobs:
           git checkout main
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add resume/resume.html
+          git add resume/index.html
           git commit -m "chore: update resume"
           git push

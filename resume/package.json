@@ -2,7 +2,7 @@
   "scripts": {
     "validate": "resume validate",
     "build:pdf": "resume export --theme stackoverflow resume.pdf",
-    "build:html": "resume export --theme stackoverflow resume.html"
+    "build:html": "resume export --theme stackoverflow index.html"
   },
   "devDependencies": {
     "resume-cli": "^3.0.5",
