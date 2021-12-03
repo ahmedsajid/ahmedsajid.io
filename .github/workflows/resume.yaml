@@ -33,9 +33,12 @@ jobs:
           RESUME_PUPPETEER_NO_SANDBOX: 1
       - name: Commit resume file
         run: |
+          git add resume/index.html
+          git stash
           git checkout main
           git config user.name github-actions
           git config user.email github-actions@github.com
+          git stash apply
           git add resume/index.html
           git commit -m "chore: update resume"
           git push
