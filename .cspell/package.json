@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "spell": "cspell ../resume/resume.json"
+  },
+  "devDependencies": {
+    "cspell": "^5.13.1"
+  }
+}
