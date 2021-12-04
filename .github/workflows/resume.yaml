@@ -4,8 +4,8 @@ name: resume
 
 on:
   workflow_run:
-    workflows: ["checks"]
-    branches: ["resume"]
+    workflows: ["resumechecks"]
+    branches: ["main"]
     types:
       - completed
 
@@ -34,7 +34,7 @@ jobs:
         run: |
           git add resume/index.html
           git stash
-          git checkout main
+          git checkout gh-pages
           git stash apply
           git status | grep 'resume/index.html'
           if [ $? -eq 0 ];then

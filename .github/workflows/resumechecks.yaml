@@ -1,11 +1,9 @@
 ---
 
-name: checks
+name: resumechecks
 
 on:
   pull_request:
-  push:
-    branches: [resume]
   schedule:
     - cron: '0 0 * * 0'
   workflow_dispatch:
