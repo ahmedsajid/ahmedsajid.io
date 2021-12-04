@@ -3,8 +3,8 @@
   "meta": {
     "theme": "stackoverflow",
     "canonical": "https://raw.githubusercontent.com/ahmedsajid/resume/main/resume.json",
-    "version": "v1.1.4",
-    "lastModified": "2021-11-30T22:00:00"
+    "version": "v1.1.5",
+    "lastModified": "2021-12-04T12:31:00"
   },
   "basics": {
     "name": "Ahmed Sajid",
@@ -90,7 +90,7 @@
       "endDate": "2015-07-31",
       "position": "Linux System Administrator",
       "startDate": "2012-07-31",
-      "summary": "One of Europe’s largest multidisciplinary research organisations.",
+      "summary": "One of Europe’s largest multidisciplinary research organizations.",
       "highlights": [
         "Administered CPU and GPU RHEL based compute clusters for UK academia.",
         "Handled complex support queries on daily basis.",
