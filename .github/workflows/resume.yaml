@@ -3,14 +3,15 @@
 name: resume
 
 on:
-  push:
-    branches:
-      - 'resume'
+  workflow_run:
+    workflows: ["checks"]
+    branches: ["resume"]
+    types:
+      - completed
 
 jobs:
   generate:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/resume'
     steps:
       - name: Checking out repo
         uses: actions/checkout@v2
@@ -21,16 +22,10 @@ jobs:
         with:
           node-version: '14'
           check-latest: true
-      - name: Check spellings
-        run: |
-          npm --prefix .cspell install
-          npm --prefix .cspell run spell
       - name: Install chromium
         run: sudo apt-get update && sudo apt-get -y install chromium-browser
       - name: Install npm packages
         run: npm --prefix resume install
-      - name: Run validation
-        run: npm --prefix resume run validate
       - name: Run generate resume html
         run: npm --prefix resume run build:html
         env:
@@ -40,9 +35,12 @@ jobs:
           git add resume/index.html
           git stash
           git checkout main
-          git config user.name github-actions
-          git config user.email github-actions@github.com
           git stash apply
-          git add resume/index.html
-          git commit -m "chore: update resume"
-          git push
+          git status | grep 'resume/index.html'
+          if [ $? -eq 0 ];then
+              git config user.name github-actions
+              git config user.email github-actions@github.com
+              git add resume/index.html
+              git commit -m "chore: update resume"
+              git push
+          fi
