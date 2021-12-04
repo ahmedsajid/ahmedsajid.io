@@ -3,6 +3,7 @@
 name: resumechecks
 
 on:
+  push:
   pull_request:
   schedule:
     - cron: '0 0 * * 0'
@@ -36,4 +37,4 @@ jobs:
       - name: Install npm packages
         run: npm --prefix .cspell install
       - name: Check spelling
-        run: npm --prefix .cspell run spell
+        run: npm --prefix .cspell run spellcheck:resume
