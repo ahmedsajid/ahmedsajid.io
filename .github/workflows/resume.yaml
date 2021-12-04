@@ -4,7 +4,7 @@ name: resume
 
 on:
   workflow_run:
-    workflows: ["checks"]
+    workflows: ["resumechecks"]
     branches: ["resume"]
     types:
       - completed
