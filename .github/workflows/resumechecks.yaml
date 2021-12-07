@@ -4,9 +4,15 @@ name: resumechecks
 
 on:
   push:
+    paths:
+      - '.github/workflows/resume*yaml'
+      - '.cspell/'
+      - 'resume/'
   pull_request:
-  schedule:
-    - cron: '0 0 * * 0'
+    paths:
+      - '.github/workflows/resume*yaml'
+      - '.cspell/'
+      - 'resume/'
   workflow_dispatch:
 
 jobs:
