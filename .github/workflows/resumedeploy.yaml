@@ -49,4 +49,6 @@ jobs:
               git add resume/index.html
               git commit -m "chore: update resume"
               git push
+          else
+              echo "Nothing to do - Resume up to date"
           fi
