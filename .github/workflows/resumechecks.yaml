@@ -6,13 +6,13 @@ on:
   push:
     paths:
       - '.github/workflows/resume*yaml'
-      - '.cspell/'
-      - 'resume/'
+      - '.cspell/*'
+      - 'resume/*'
   pull_request:
     paths:
       - '.github/workflows/resume*yaml'
-      - '.cspell/'
-      - 'resume/'
+      - '.cspell/*'
+      - 'resume/*'
   workflow_dispatch:
 
 jobs:
