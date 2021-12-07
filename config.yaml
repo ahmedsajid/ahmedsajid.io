@@ -1,0 +1,118 @@
+---
+
+baseURL: "https://ahmedsajid.github.io"
+title: Ahmed Sajid's Personal Web
+paginate: 5
+theme: papermod
+disableKinds: "404"
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+googleAnalytics: G-P5HQWY53P9
+minify:
+    disableXML: true
+    # minifyOutput: true
+
+languages:
+    en:
+        languageName: "English"
+        weight: 1
+        menu:
+            main:
+                # - name: Archive
+                #   url: archives
+                #   weight: 5
+                - name: Home
+                  url: '' 
+                  weight: 5
+                - name: Resume
+                  url: resume
+                  weight: 6
+                - name: Search
+                  url: search/
+                  weight: 10
+                - name: Tags
+                  url: tags/
+                  weight: 10
+                  # - name: Categories
+                  #   url: categories/
+                  #   weight: 10
+
+
+outputs:
+    home:
+        - HTML
+        # - RSS
+        - JSON
+
+params:
+    env: production  # to enable google analytics, opengraph, twitter-cards and schema.
+    description: "Ahmed Sajid's Web Page"
+    author: ["Ahmed Sajid"]
+
+    defaultTheme: auto
+    # disableThemeToggle: true
+    ShowShareButtons: false
+    ShowReadingTime: true
+    # disableSpecial1stPost: true
+    displayFullLangName: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    ShowToc: true
+    comments: false
+    # comments: false
+    # images: ["papermod-cover.png"]
+
+    # profileMode:
+    #     enabled: false
+    #     title: PaperMod
+    #     imageUrl: "#"
+    #     imageTitle: my image
+    #     # imageWidth: 120
+    #     # imageHeight: 120
+    #     buttons:
+    #         - name: Archives
+    #           url: archives
+    #         - name: Tags
+    #           url: tags
+
+    homeInfoParams:
+        Title: "My Personal Web"
+        Content: >
+
+            Hi there &#128075;
+
+            - Welcome to my personal website.
+
+            - I'm Ahmed Sajid.
+
+            - You will mostly find random things here.
+
+            - Once in a blue moon there might be something interesting and/or useful.
+
+            - You can checkout my work on Github or connect with me via LinkedIn.
+
+    socialIcons:
+        - name: github
+          url: "https://github.com/ahmedsajid"
+        - name: linkedin
+          url: "https://linkedin.com/in/ahsajid"
+
+    editPost:
+        URL: "https://github.com/ahmedsajid/ahmedsajid.github.io/tree/web/content"
+        Text: "Suggest Changes"  # edit text
+        appendFilePath: true  # to append file path to Edit link
+
+taxonomies:
+    # category: categories
+    tag: tags
+    series: series
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
