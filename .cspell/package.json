@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "spellcheck:resume": "cspell ../resume/resume.json"
+    "spellcheck:resume": "cspell ../resume/resume.json",
+    "spellcheck:web": "cspell ../content/**/*.md"
   },
   "devDependencies": {
     "cspell": "^5.13.1"
