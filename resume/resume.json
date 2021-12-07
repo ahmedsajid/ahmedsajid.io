@@ -3,8 +3,8 @@
   "meta": {
     "theme": "stackoverflow",
     "canonical": "https://raw.githubusercontent.com/ahmedsajid/resume/main/resume.json",
-    "version": "v1.1.5",
-    "lastModified": "2021-12-04T12:31:00"
+    "version": "v1.1.6",
+    "lastModified": "2021-12-07T17:22:00"
   },
   "basics": {
     "name": "Ahmed Sajid",
@@ -12,7 +12,7 @@
     "picture": "",
     "email": "ahmed4343@hotmail.com",
     "phone": "",
-    "website": "https://ahmedsajid.github.io",
+    "website": "https://ahmedsajid.io",
     "summary": "Certified Kubernetes Application Developer, Certified Kubernetes Administrator and Red Hat Certified Engineer with 9 years of experience in IT industry, working with Web Servers, Mail Systems, High Performance Computing Clusters and Blockchain, with passion for automation and Open Source.",
     "location": {
       "city": "Toronto",
