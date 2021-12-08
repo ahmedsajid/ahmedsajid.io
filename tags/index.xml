@@ -2,88 +2,88 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Ahmed Sajid&#39;s Personal Web</title>
-    <link>https://ahmedsajid.github.io/tags/</link>
+    <link>https://ahmedsajid.io/tags/</link>
     <description>Recent content in Tags on Ahmed Sajid&#39;s Personal Web</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 20 Sep 2021 09:00:00 -0500</lastBuildDate><atom:link href="https://ahmedsajid.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Sep 2021 09:00:00 -0500</lastBuildDate><atom:link href="https://ahmedsajid.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ansible</title>
-      <link>https://ahmedsajid.github.io/tags/ansible/</link>
+      <link>https://ahmedsajid.io/tags/ansible/</link>
       <pubDate>Mon, 20 Sep 2021 09:00:00 -0500</pubDate>
       
-      <guid>https://ahmedsajid.github.io/tags/ansible/</guid>
+      <guid>https://ahmedsajid.io/tags/ansible/</guid>
       <description></description>
     </item>
     
     <item>
       <title>automation</title>
-      <link>https://ahmedsajid.github.io/tags/automation/</link>
+      <link>https://ahmedsajid.io/tags/automation/</link>
       <pubDate>Mon, 20 Sep 2021 09:00:00 -0500</pubDate>
       
-      <guid>https://ahmedsajid.github.io/tags/automation/</guid>
+      <guid>https://ahmedsajid.io/tags/automation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cron</title>
-      <link>https://ahmedsajid.github.io/tags/cron/</link>
+      <link>https://ahmedsajid.io/tags/cron/</link>
       <pubDate>Mon, 20 Sep 2021 09:00:00 -0500</pubDate>
       
-      <guid>https://ahmedsajid.github.io/tags/cron/</guid>
+      <guid>https://ahmedsajid.io/tags/cron/</guid>
       <description></description>
     </item>
     
     <item>
       <title>healthchecks.io</title>
-      <link>https://ahmedsajid.github.io/tags/healthchecks.io/</link>
+      <link>https://ahmedsajid.io/tags/healthchecks.io/</link>
       <pubDate>Mon, 20 Sep 2021 09:00:00 -0500</pubDate>
       
-      <guid>https://ahmedsajid.github.io/tags/healthchecks.io/</guid>
+      <guid>https://ahmedsajid.io/tags/healthchecks.io/</guid>
       <description></description>
     </item>
     
     <item>
       <title>monitoring</title>
-      <link>https://ahmedsajid.github.io/tags/monitoring/</link>
+      <link>https://ahmedsajid.io/tags/monitoring/</link>
       <pubDate>Mon, 20 Sep 2021 09:00:00 -0500</pubDate>
       
-      <guid>https://ahmedsajid.github.io/tags/monitoring/</guid>
+      <guid>https://ahmedsajid.io/tags/monitoring/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CKA</title>
-      <link>https://ahmedsajid.github.io/tags/cka/</link>
+      <link>https://ahmedsajid.io/tags/cka/</link>
       <pubDate>Tue, 10 Aug 2021 11:54:27 -0500</pubDate>
       
-      <guid>https://ahmedsajid.github.io/tags/cka/</guid>
+      <guid>https://ahmedsajid.io/tags/cka/</guid>
       <description></description>
     </item>
     
     <item>
       <title>CKAD</title>
-      <link>https://ahmedsajid.github.io/tags/ckad/</link>
+      <link>https://ahmedsajid.io/tags/ckad/</link>
       <pubDate>Tue, 10 Aug 2021 11:54:27 -0500</pubDate>
       
-      <guid>https://ahmedsajid.github.io/tags/ckad/</guid>
+      <guid>https://ahmedsajid.io/tags/ckad/</guid>
       <description></description>
     </item>
     
     <item>
       <title>k8s</title>
-      <link>https://ahmedsajid.github.io/tags/k8s/</link>
+      <link>https://ahmedsajid.io/tags/k8s/</link>
       <pubDate>Tue, 10 Aug 2021 11:54:27 -0500</pubDate>
       
-      <guid>https://ahmedsajid.github.io/tags/k8s/</guid>
+      <guid>https://ahmedsajid.io/tags/k8s/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kubernetes</title>
-      <link>https://ahmedsajid.github.io/tags/kubernetes/</link>
+      <link>https://ahmedsajid.io/tags/kubernetes/</link>
       <pubDate>Tue, 10 Aug 2021 11:54:27 -0500</pubDate>
       
-      <guid>https://ahmedsajid.github.io/tags/kubernetes/</guid>
+      <guid>https://ahmedsajid.io/tags/kubernetes/</guid>
       <description></description>
     </item>
     

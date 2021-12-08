@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>cron on Ahmed Sajid&#39;s Personal Web</title>
-    <link>https://ahmedsajid.github.io/tags/cron/</link>
+    <link>https://ahmedsajid.io/tags/cron/</link>
     <description>Recent content in cron on Ahmed Sajid&#39;s Personal Web</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 20 Sep 2021 09:00:00 -0500</lastBuildDate><atom:link href="https://ahmedsajid.github.io/tags/cron/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Sep 2021 09:00:00 -0500</lastBuildDate><atom:link href="https://ahmedsajid.io/tags/cron/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Simple cron monitoring using healthchecks.io</title>
-      <link>https://ahmedsajid.github.io/posts/healthchecks.io/</link>
+      <link>https://ahmedsajid.io/posts/healthchecks.io/</link>
       <pubDate>Mon, 20 Sep 2021 09:00:00 -0500</pubDate>
       
-      <guid>https://ahmedsajid.github.io/posts/healthchecks.io/</guid>
+      <guid>https://ahmedsajid.io/posts/healthchecks.io/</guid>
       <description>While working on home server automation, I came across the awesome Open Source project healthchecks.
 I had been looking for a simple way to monitoring my Ansible home automation setup that is triggered via cron and send me alerts if my home automation takes longer than a set interval or just fails.
 healthchecks.io, the service for healthchecks project, is an extremely simple dashboard for setting up monitoring. It also has integration with alerting systems as well as commonly used communication tools such as Teams, Slack, Signal and numerous others.</description>

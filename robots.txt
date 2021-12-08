@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://ahmedsajid.github.io/sitemap.xml
+Sitemap: https://ahmedsajid.io/sitemap.xml
