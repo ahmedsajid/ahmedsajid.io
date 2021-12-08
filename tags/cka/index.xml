@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>CKA on Ahmed Sajid&#39;s Personal Web</title>
+    <link>https://ahmedsajid.github.io/tags/cka/</link>
+    <description>Recent content in CKA on Ahmed Sajid&#39;s Personal Web</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 10 Aug 2021 11:54:27 -0500</lastBuildDate><atom:link href="https://ahmedsajid.github.io/tags/cka/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Immediate Kubernetes Certification Exam results</title>
+      <link>https://ahmedsajid.github.io/posts/immediate-kubernetes-results/</link>
+      <pubDate>Tue, 10 Aug 2021 11:54:27 -0500</pubDate>
+      
+      <guid>https://ahmedsajid.github.io/posts/immediate-kubernetes-results/</guid>
+      <description>I recently passed CKA and CKAD (yay me!).
+Being that I&amp;rsquo;m very impatient and I couldn&amp;rsquo;t wait the 24 hours for my result. For people who haven&amp;rsquo;t attempted the Certified Kubernetes exams, there&amp;rsquo;s a 24 hour period between completing your exam and receiving the results.
+So after I attempted CKAD (which came after CKA for me), I started inspecting the API calls. Users on Reddit pointed out that that exams are automatically marked and I wondered if there&amp;rsquo;s a way to figure out scores before 24 hour period.</description>
+    </item>
+    
+  </channel>
+</rss>
