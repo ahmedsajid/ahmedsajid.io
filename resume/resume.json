@@ -3,8 +3,8 @@
   "meta": {
     "theme": "stackoverflow",
     "canonical": "https://raw.githubusercontent.com/ahmedsajid/resume/main/resume.json",
-    "version": "v1.1.6",
-    "lastModified": "2021-12-07T17:22:00"
+    "version": "v1.1.7",
+    "lastModified": "2021-12-07T21:52:00"
   },
   "basics": {
     "name": "Ahmed Sajid",
@@ -214,8 +214,10 @@
       "level": "",
       "keywords": [
         "Graylog",
-        "Splunk",
         "Sensu",
+        "Prometheus",
+        "Grafana",
+        "Splunk",
         "Nagios/Icinga",
         "LibreNMS"
       ]
