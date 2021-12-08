@@ -31,7 +31,7 @@ jobs:
           hugo-version: 'latest'
 
       - name: Build Hugo Website
-        run: hugo --buildDrafts --gc --verbose --minify
+        run: hugo --gc --verbose --minify
 
       - name: Deploy Hugo Website
         run: |
