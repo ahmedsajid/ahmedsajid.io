@@ -20,35 +20,17 @@ jobs:
           fetch-depth: 0
           submodules: 'recursive'
 
-      - name: Setup Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-          check-latest: true
-
       - name: Setup hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
 
       - name: Build Hugo Website
-        run: hugo --gc --verbose --minify
+        run: hugo --minify
 
-      - name: Deploy Hugo Website
-        run: |
-          git checkout gh-pages
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          # Remove everything execept a few files
-          rm -rvf '!(".git"|"LICENSE"|"resume"|"CNAME")'
-          # Copy out public directory
-          cp -rav ./public/* .
-          # Remove public directory as its not needed
-          rm -rf ./public/
-          # Add everything
-          git add -A
-          if git commit -m "chore: update website"; then
-              git push
-          else
-              echo "Nothing to add for the website"
-          fi
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
