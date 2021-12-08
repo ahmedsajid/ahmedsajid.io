@@ -24,24 +24,24 @@ on:
 
 jobs:
 
-  validate:
-    runs-on: ubuntu-latest
-    steps:
+  # validate:
+  #   runs-on: ubuntu-latest
+  #   steps:
 
-      - name: Checking out repo
-        uses: actions/checkout@v2
+  #     - name: Checking out repo
+  #       uses: actions/checkout@v2
 
-      - name: Setup Node
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-          check-latest: true
+  #     - name: Setup Node
+  #       uses: actions/setup-node@v2
+  #       with:
+  #         node-version: '14'
+  #         check-latest: true
 
-      - name: Install npm packages
-        run: npm --prefix resume install
+  #     - name: Install npm packages
+  #       run: npm --prefix resume install
 
-      - name: Run validation
-        run: npm --prefix resume run validate
+  #     - name: Run validation
+  #       run: npm --prefix resume run validate
 
   spellcheck:
     runs-on: ubuntu-latest
