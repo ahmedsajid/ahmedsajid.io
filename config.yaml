@@ -1,6 +1,6 @@
 ---
 
-baseURL: "https://ahmedsajid.github.io"
+baseURL: "https://ahmedsajid.io"
 title: Ahmed Sajid's Personal Web
 paginate: 5
 theme: papermod
@@ -103,7 +103,7 @@ params:
           url: "https://linkedin.com/in/ahsajid"
 
     editPost:
-        URL: "https://github.com/ahmedsajid/ahmedsajid.github.io/tree/web/content"
+        URL: "https://github.com/ahmedsajid/ahmedsajid.io/tree/web/content"
         Text: "Suggest Changes"  # edit text
         appendFilePath: true  # to append file path to Edit link
 
