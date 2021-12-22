@@ -1,6 +1,8 @@
 ---
 title: "Bazel: Multi language Build Software for Monorepos"
 date: 2021-12-04T18:49:08-05:00
+tags: ["Bazel", "Build", "monorepo", "make"]
+layout: post
 ---
 
 Early on in my career I was responsible for compiling scientific software, installing them on HPC clusters to be used by scientists for their job runs. This is where I learned the 3 most used commands used when building and installing software. These ere `configure`, `make` and `make install`, as simple as that.
