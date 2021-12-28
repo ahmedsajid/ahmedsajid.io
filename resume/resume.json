@@ -3,8 +3,8 @@
   "meta": {
     "theme": "stackoverflow",
     "canonical": "https://raw.githubusercontent.com/ahmedsajid/resume/main/resume.json",
-    "version": "v1.2.0",
-    "lastModified": "2021-12-27T21:22:00"
+    "version": "v1.2.1",
+    "lastModified": "2021-12-27T21:38:00"
   },
   "basics": {
     "name": "Ahmed Sajid",
@@ -36,7 +36,7 @@
     {
       "summary": "Kira Systems is a SaaS provider with world's largest law firms and corporations as their clients. They provide Artificial Intelligence and Machine Learning to their customers helping them understand what's in their contracts and documents",
       "position": "Senior Site Reliability Specialist",
-      "startDate": "2019-05-31",
+      "startDate": "2021-10-18",
       "highlights": [
         "Part of Core Operations team providing support for both Development as well as Production workloads.",
         "Work closely with the internal teams and providing engineering support when required.",
