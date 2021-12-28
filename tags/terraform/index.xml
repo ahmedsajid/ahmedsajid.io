@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Terraform on Ahmed Sajid&#39;s Personal Web</title>
+    <link>https://ahmedsajid.io/tags/terraform/</link>
+    <description>Recent content in Terraform on Ahmed Sajid&#39;s Personal Web</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 04 Dec 2021 16:47:59 -0500</lastBuildDate><atom:link href="https://ahmedsajid.io/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Deploy Virtual Servers using cURL</title>
+      <link>https://ahmedsajid.io/posts/deploy-virtual-server-using-curl/</link>
+      <pubDate>Sat, 04 Dec 2021 16:47:59 -0500</pubDate>
+      
+      <guid>https://ahmedsajid.io/posts/deploy-virtual-server-using-curl/</guid>
+      <description>The most popular IaC tool at this point is HashiCorp&amp;rsquo;s Terraform. However during my usual internet browsing, I found another Infrastructure-as-Code tool Pulumi. Its been around for years at this point but I only discovered it very recently.
+Pulumi achieves the same thing, Infrastructure-as-Code. However, it uses a different approach. Instead of having to write Terraform HCL files, you can use your favorite programming language such as Python or Go to write code for your infrastructure.</description>
+    </item>
+    
+  </channel>
+</rss>

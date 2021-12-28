@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Bazel on Ahmed Sajid&#39;s Personal Web</title>
+    <link>https://ahmedsajid.io/tags/bazel/</link>
+    <description>Recent content in Bazel on Ahmed Sajid&#39;s Personal Web</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 04 Dec 2021 18:49:08 -0500</lastBuildDate><atom:link href="https://ahmedsajid.io/tags/bazel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bazel: Multi language Build Software for Monorepos</title>
+      <link>https://ahmedsajid.io/posts/bazel-build-system/</link>
+      <pubDate>Sat, 04 Dec 2021 18:49:08 -0500</pubDate>
+      
+      <guid>https://ahmedsajid.io/posts/bazel-build-system/</guid>
+      <description>Early on in my career I was responsible for compiling scientific software, installing them on HPC clusters to be used by scientists for their job runs. This is where I learned the 3 most used commands used when building and installing software. These ere configure, make and make install, as simple as that.
+Fast forward years, code is longer just writing C or C++ code, these days most of the new software code is written in Golang, Python or Java just to name a few.</description>
+    </item>
+    
+  </channel>
+</rss>
