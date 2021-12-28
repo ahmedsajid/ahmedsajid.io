@@ -3,17 +3,17 @@
   "meta": {
     "theme": "stackoverflow",
     "canonical": "https://raw.githubusercontent.com/ahmedsajid/resume/main/resume.json",
-    "version": "v1.1.7",
-    "lastModified": "2021-12-07T21:52:00"
+    "version": "v1.2.0",
+    "lastModified": "2021-12-27T21:22:00"
   },
   "basics": {
     "name": "Ahmed Sajid",
-    "label": "DevOps | CKA & CKAD",
+    "label": "DevOps | SRE | CKA & CKAD",
     "picture": "",
     "email": "ahmed4343@hotmail.com",
     "phone": "",
     "website": "https://ahmedsajid.io",
-    "summary": "Certified Kubernetes Application Developer, Certified Kubernetes Administrator and Red Hat Certified Engineer with 9 years of experience in IT industry, working with Web Servers, Mail Systems, High Performance Computing Clusters and Blockchain, with passion for automation and Open Source.",
+    "summary": "Certified Kubernetes Application Developer, Certified Kubernetes Administrator and Red Hat Certified Engineer with 9 years of experience in IT industry, working with Web Servers, Mail Systems, High Performance Computing Clusters, Blockchain and AI/ML, with passion for automation and Open Source.",
     "location": {
       "city": "Toronto",
       "countryCode": "CA",
@@ -34,6 +34,18 @@
   },
   "work": [
     {
+      "summary": "Kira Systems is a SaaS provider with world's largest law firms and corporations as their clients. They provide Artificial Intelligence and Machine Learning to their customers helping them understand what's in their contracts and documents",
+      "position": "Senior Site Reliability Specialist",
+      "startDate": "2019-05-31",
+      "highlights": [
+        "Part of Core Operations team providing support for both Development as well as Production workloads.",
+        "Work closely with the internal teams and providing engineering support when required.",
+        "Wrote and maintained Infrastructure as a Code repositories for automated deployments."
+      ],
+      "name": "Kira Systems Inc."
+    },
+    {
+      "endDate": "2021-10-06",
       "summary": "SecureKey is an Identity and authentication provider with Canadian Federal and Provincial Governments, other Fintechs as clients and partners.\nStarted working as L3 Support Team Lead getting promoted to Manager role within few months.",
       "position": "Manager, Verified.Me Support",
       "startDate": "2019-05-31",
@@ -42,7 +54,7 @@
         "Technical coordination with partners including Financial Institutions and Government entities.",
         "Wrote and maintained Infrastructure as a Code repositories for automated deployments."
       ],
-      "name": "SecureKey Technologies Inc"
+      "name": "SecureKey Technologies Inc."
     },
     {
       "endDate": "2019-05-31",
@@ -55,7 +67,7 @@
         "Escalation point for Operations team for L2/L3 Support.",
         "Implemented and also supported production changes in out-of-hours maintenance windows."
       ],
-      "name": "SecureKey Technologies Inc"
+      "name": "SecureKey Technologies Inc."
     },
     {
       "endDate": "2016-10-31",
@@ -70,7 +82,7 @@
         "Managed of issues using an ITIL-compliant ticketing system",
         "Vendor Management"
       ],
-      "name": "SecureKey Technologies Inc"
+      "name": "SecureKey Technologies Inc."
     },
     {
       "endDate": "2016-03-31",
