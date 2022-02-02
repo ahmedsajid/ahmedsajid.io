@@ -52,12 +52,12 @@
       "position": "Manager, Verified.Me Support",
       "startDate": "2019-05-31",
       "highlights": [
-        "Started as a Level 3 team lead being promoted to Manager within a few months.",
+        "Started as a Level 3 Team Lead being promoted to Manager within a few months.",
         "Involved in countless calls with high value clients, helped addressing technical and integration issues.",
         "Part of project management team working through several coordinated upgrades and migrations.",
         "Assisted developers in solving deployment related issues with docker-compose.",
         "Converted docker-compose based local development deployment to Kubernetes compatible Kustomize deployment.",
-        "Wrote and maintained CI and CD pipelines to accelerate both the test and development process and enabling faster release to Production. Implemented CI pipeline for deployment repositories, a stepping stone towards GitOps.",
+        "Wrote and maintained CI/CD pipelines to accelerate both the test and development process and enabling faster release to Production. Implemented CI pipeline for deployment repositories, a stepping stone towards GitOps.",
         "Created Analytics pipeline using only the server and application logs which provided much needed visibility into user transactional flows filling in the software implementation gaps. This pipeline was then used to help with troubleshooting and discovering issues within a distributed system.",
         "Created Analytics Dashboards for centralized view of Production system usage by  using custom Python code by extracting information from database, transforming the data to required format and exposing it via API endpoint."
       ],
