@@ -28,7 +28,7 @@ on:
 
 jobs:
 
-  spellcheck:
+  webspellcheck:
     runs-on: ubuntu-latest
     steps:
 
