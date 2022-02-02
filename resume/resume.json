@@ -3,8 +3,8 @@
   "meta": {
     "theme": "stackoverflow",
     "canonical": "https://raw.githubusercontent.com/ahmedsajid/resume/main/resume.json",
-    "version": "v2.0.0",
-    "lastModified": "2022-02-01T22:45:00"
+    "version": "v2.0.1",
+    "lastModified": "2022-02-02T08:30:00"
   },
   "basics": {
     "name": "Ahmed Sajid",
@@ -38,7 +38,7 @@
       "position": "Senior Site Reliability Specialist",
       "startDate": "2021-10-18",
       "highlights": [
-        "Increased observability of critical development infrastructure within Prometheus/Alertmanager, ensuring development teams can focus on high business value task of writing software product uninterrupted.",
+        "Increased observability of critical development infrastructure using Prometheus/Alertmanager, ensuring development teams can focus on high business value task of writing software product uninterrupted.",
         "Updated Jenkins Infrastructure and CI pipelines to decrease build failures and provide higher reliability.",
         "Spearheaded several initiatives to reduce technical debt.",
         "Wrote Github Action automation bots in Python integrated into development CI process to enforce security requirements.",
@@ -84,6 +84,7 @@
       "position": "Systems Administrator",
       "startDate": "2016-06-06",
       "highlights": [
+        "Introduced SSSD as alternative to an expensive legacy product for managing SSH access to Linux systems.",
         "Day-to-Day operations and maintenance of the server infrastructure supporting cloud services with a focus on Red Hat Linux, JAVA application servers, MySQL, and VMWare ESX.",
         "Implemented production changes in out-of-hours maintenance windows.",
         "On-call for critical incident support on a rotational basis.",
@@ -115,9 +116,11 @@
         "Administered CPU and GPU RHEL based compute clusters for UK academia.",
         "Provisioned new hardware equipment including PDUs, Servers, Network switches.",
         "Benchmarked new High Performance Computing cluster to determine peak performance.",
+        "Added RHEL7 template in the automatic provisioning system to be used for upgrading RHEL6 systems.",
         "Handled complex tasks on daily basis, ranging from simple login issues, expired server and client certificates to more involved such as troubleshooting MTU misconfiguration on network switches.",
         "Liaised with vendors for replacement of faulty hardware.",
-        "Provisioned physical and virtual machines for running web servers."
+        "Provisioned physical and virtual machines for running web servers.",
+        "Integrated Kerberos based authentication into login workflow for HPC systems, simplifying the user provisioning process as well as improving user experience."
       ],
       "name": "Science and Technology Facilities Council"
     }
