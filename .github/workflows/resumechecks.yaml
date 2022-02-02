@@ -4,11 +4,15 @@ name: resumechecks
 
 on:
   push:
+    branches:
+      - 'main'
     paths:
       - '.github/workflows/resume*yaml'
       - '.cspell/*'
       - 'resume/*'
   pull_request:
+    branches:
+      - 'main'
     paths:
       - '.github/workflows/resume*yaml'
       - '.cspell/*'
@@ -54,3 +58,36 @@ jobs:
 
       - name: Check spelling
         run: npm --prefix .cspell run spellcheck:resume
+
+  generate:
+    runs-on: ubuntu-latest
+    needs:
+      - validate
+      - spellcheck
+    steps:
+
+      - name: Checking out repo
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+          check-latest: true
+
+      - name: Install chromium
+        run: sudo apt-get -y install chromium-browser
+
+      - name: Install npm packages
+        run: npm --prefix resume install
+
+      - name: Run generate resume html
+        run: npm --prefix resume run build:html
+        env:
+          RESUME_PUPPETEER_NO_SANDBOX: 1
+
+      - name: Archive resume html file
+        uses: actions/upload-artifact@v2
+        with:
+          name: resume
+          path: resume/index.html

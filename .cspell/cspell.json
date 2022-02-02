@@ -1,23 +1,25 @@
 {
-    "version": "0.2",
-    "language": "en",
-    "words": [
-        "Kubernetes",
-	"stackoverflow",
-	"CKAD",
-	"ahsajid",
-	"ahmedsajid",
-	"Sajid",
-	"Fintechs",
-	"ITIL",
-	"INtegra",
-	"Pulumi",
-	"Bazel",
-	"Hyperledger",
-	"CNCF",
-	"healthchecks",
-	"hashi",
-	"Grafana",
-	"Kira"
-    ]
+  "version": "0.3",
+  "language": "en",
+  "words": [
+    "Kubernetes",
+    "stackoverflow",
+    "CKAD",
+    "ahsajid",
+    "ahmedsajid",
+    "Sajid",
+    "Fintechs",
+    "ITIL",
+    "INtegra",
+    "Pulumi",
+    "Bazel",
+    "Hyperledger",
+    "CNCF",
+    "healthchecks",
+    "hashi",
+    "Grafana",
+    "Kira",
+    "Kustomize",
+    "Alertmanager"
+  ]
 }
