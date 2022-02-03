@@ -27,16 +27,13 @@ jobs:
           node-version: '14'
           check-latest: true
 
-      - name: Install chromium
-        run: sudo apt-get update && sudo apt-get -y install chromium-browser
-
       - name: Install npm packages
         run: npm --prefix resume install
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: 1
 
       - name: Run generate resume html
         run: npm --prefix resume run build:html
-        env:
-          RESUME_PUPPETEER_NO_SANDBOX: 1
 
       - name: Commit resume file
         run: |
