@@ -84,7 +84,10 @@ Deploy Virtual Servers using cURL
 <div class=post-meta><span title="2021-12-04 16:47:59 -0500 -0500">December 4, 2021</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Ahmed Sajid&nbsp;|&nbsp;<a href=https://github.com/ahmedsajid/ahmedsajid.io/tree/web/content/posts/Deploy-Virtual-Server-using-cURL.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
 </div>
 </header>
-<div class=post-content><p>The most popular IaC tool at this point is HashiCorp&rsquo;s <a href=terraform.io/>Terraform</a>. However during my usual internet browsing, I found another Infrastructure-as-Code tool <a href=https://www.pulumi.com/>Pulumi</a>. Its been around for years at this point but I only discovered it very recently.</p>
+<div class=post-content><p align=center>
+<img src=https://raw.githubusercontent.com/ahmedsajid/droplet-deployer/main/docs/assets/droplet-deployer.png>
+</p>
+<p>The most popular IaC tool at this point is HashiCorp&rsquo;s <a href=terraform.io/>Terraform</a>. However during my usual internet browsing, I found another Infrastructure-as-Code tool <a href=https://www.pulumi.com/>Pulumi</a>. Its been around for years at this point but I only discovered it very recently.</p>
 <p>Pulumi achieves the same thing, Infrastructure-as-Code. However, it uses a different approach. Instead of having to write Terraform HCL files, you can use your favorite programming language such as Python or Go to write code for your infrastructure. This means you no longer have to stitch together different piece of custom written code for different set of tools to manage your platform. You can pick any of the supported Pulumi language and use it to a full end-to-end automation for your platform.</p>
 <p>After reading such great things about Pulumi, I wanted to try out Pulumi and really find out the actual benefits of using it.</p>
 <p>So I wrote a simple Python Flask application <a href=https://github.com/ahmedsajid/droplet-deployer>Droplet Deployer</a> which uses Pulumi in the background to make deploying and Droplets on DigitalOcean Cloud as simple as a single <code>curl</code> command.</p>
