@@ -4,6 +4,10 @@ date: 2021-12-04T16:47:59-05:00
 tags: ["digitalocean", "Pulumi", "automation", "Terraform"]
 layout: post
 ---
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ahmedsajid/droplet-deployer/main/docs/assets/droplet-deployer.png">
+</p>
+
 
 The most popular IaC tool at this point is HashiCorp's [Terraform](terraform.io/). However during my usual internet browsing, I found another Infrastructure-as-Code tool [Pulumi](https://www.pulumi.com/). Its been around for years at this point but I only discovered it very recently.
 
