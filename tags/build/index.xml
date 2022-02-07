@@ -5,7 +5,18 @@
     <link>https://ahmedsajid.io/tags/build/</link>
     <description>Recent content in Build on Ahmed Sajid&#39;s Personal Web</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 04 Dec 2021 18:49:08 -0500</lastBuildDate><atom:link href="https://ahmedsajid.io/tags/build/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Feb 2022 22:00:00 -0500</lastBuildDate><atom:link href="https://ahmedsajid.io/tags/build/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jenkins EC2 plugin worker AMI selection based on Resource Tags</title>
+      <link>https://ahmedsajid.io/posts/jenkins-ec2-plugin-tags-filter/</link>
+      <pubDate>Sun, 06 Feb 2022 22:00:00 -0500</pubDate>
+      
+      <guid>https://ahmedsajid.io/posts/jenkins-ec2-plugin-tags-filter/</guid>
+      <description>TL;DR, Jenkins EC2 plugin has the option for worker AMIs to be selected based on Tags and NOT just a hardcoded AMI ID. This comes in handy when you have an automated build pushing out AMIs with the same tags on regular basis, eliminating the need for manually updating hardcoded AMI to latest version in Jenkins EC2 cloud configuration.
+Long version&amp;hellip;&amp;hellip;
+Most companies managing their own Jenkins CI Build system on AWS Cloud must be familiar with the ec2-plugin.</description>
+    </item>
+    
     <item>
       <title>Bazel: Multi language Build Software for Monorepos</title>
       <link>https://ahmedsajid.io/posts/bazel-build-system/</link>
