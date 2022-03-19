@@ -37,6 +37,7 @@
       "summary": "Kira Systems is a SaaS provide, with world's largest law firms and corporations as their clients, providing Artificial Intelligence and Machine Learning, helping in understanding the contents of their legal documents.\nPart of the Core Operations team supporting both Development and Production workloads. Working closely with internal teams, providing engineering support on demand.",
       "position": "Senior Site Reliability Specialist",
       "startDate": "2021-10-18",
+      "endDate": "2022-03-18",
       "highlights": [
         "Maintained Infrastructure as Code deployments for Development environments and supporting services.",
         "Increased observability of critical development infrastructure using Prometheus/Alertmanager, ensuring development teams remain focus on high business value task.",
