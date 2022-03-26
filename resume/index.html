@@ -1036,6 +1036,7 @@ section .location {
                 <li><p>Maintained Infrastructure as Code deployments for Development environments and supporting services.</p></li>
                 <li><p>Increased observability of critical development infrastructure using Prometheus/Alertmanager, ensuring development teams remain focus on high business value task.</p></li>
                 <li><p>Updated Jenkins Infrastructure and CI pipelines to decrease build failures and provide higher reliability.</p></li>
+                <li><p>Reduced CI build time in Jenkins for the main monorepo, consisting of 80 plus individual components, from 1 hour 40 minutes to 58 minutes by simply rewriting the pipeline running parallel batches building interdependent components to fully parallelized locking based approach. This ensured that compute resources were utilized for the maximum amount of time, while reducing CI build time by 40%, accelerating software development cycle resulting in faster releases to production.</p></li>
                 <li><p>Spearheaded several initiatives successfully to reduce technical debt.</p></li>
                 <li><p>Wrote Github Action automation bots in Python for development CI process to enforcing security requirements.</p></li>
                 <li><p>As the senior team member, provided technical assistance to members regularly.</p></li>
