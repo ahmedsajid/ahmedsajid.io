@@ -3,8 +3,8 @@
   "meta": {
     "theme": "stackoverflow",
     "canonical": "https://raw.githubusercontent.com/ahmedsajid/resume/main/resume.json",
-    "version": "v2.1.1",
-    "lastModified": "2022-03-19T13:44:00"
+    "version": "v2.1.2",
+    "lastModified": "2022-03-25T22:24:00"
   },
   "basics": {
     "name": "Ahmed Sajid",
@@ -42,6 +42,7 @@
         "Maintained Infrastructure as Code deployments for Development environments and supporting services.",
         "Increased observability of critical development infrastructure using Prometheus/Alertmanager, ensuring development teams remain focus on high business value task.",
         "Updated Jenkins Infrastructure and CI pipelines to decrease build failures and provide higher reliability.",
+        "Reduced CI build time in Jenkins for the main monorepo, consisting of 80 plus individual components, from 1 hour 40 minutes to 58 minutes by simply rewriting the pipeline running parallel batches building interdependent components to fully parallelized locking based approach. This ensured that compute resources were utilized for the maximum amount of time, while reducing CI build time by 40%, accelerating software development cycle resulting in faster releases to production.",
         "Spearheaded several initiatives successfully to reduce technical debt.",
         "Wrote Github Action automation bots in Python for development CI process to enforcing security requirements.",
         "As the senior team member, provided technical assistance to members regularly."
