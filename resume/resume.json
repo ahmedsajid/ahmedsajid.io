@@ -34,7 +34,16 @@
   },
   "work": [
     {
-      "summary": "Kira Systems is a SaaS provide, with world's largest law firms and corporations as their clients, providing Artificial Intelligence and Machine Learning, helping in understanding the contents of their legal documents.\nPart of the Core Operations team supporting both Development and Production workloads. Working closely with internal teams, providing engineering support on demand.",
+      "summary": "Wonolo Inc. is SaaS company, providing a two-sided tech marketplace connecting companies with workers. The platform helps worker find flexible work based on their schedule.\nPart of a small CloudOps team using IaC and DevOps approach in supporting Wonolo's AWS Infrastructure. The role also involves working with closely with several internal teams, providing technical support in resolving critical business challenges.",
+      "position": "DevOps Engineer",
+      "startDate": "2022-03-22",
+      "highlights": [
+        "Improved CI build time by deploying AWS Lambda functions to manage queues and workload. This approach provides consistent computing resources which resulted in smaller build times, with end result of quicker deployments to production resulted in smaller build times, with end result of quicker deployments to production environment."
+      ],
+      "name": "Wonolo Inc."
+    },
+    {
+      "summary": "Kira Systems is a SaaS provider, with world's largest law firms and corporations as their clients, providing Artificial Intelligence and Machine Learning, helping in understanding the contents of their legal documents.\nPart of the Core Operations team supporting both Development and Production workloads. Working closely with internal teams, providing engineering support on demand.",
       "position": "Senior Site Reliability Specialist",
       "startDate": "2021-10-18",
       "endDate": "2022-03-18",
@@ -144,7 +153,9 @@
       "keywords": [
         "Ansible",
         "Terraform",
-        "Pulumi"
+        "Pulumi",
+        "Chef",
+        "Packer"
       ]
     },
     {
@@ -170,7 +181,9 @@
       "level": "",
       "keywords": [
         "Docker",
-        "Kubernetes"
+        "Kubernetes",
+        "Nomad",
+        "Consul"
       ]
     },
     {
@@ -188,6 +201,7 @@
       "keywords": [
         "Jenkins",
         "Github Actions",
+        "Buildkite",
         "Bazel",
         "Make",
         "CMake"
@@ -207,6 +221,7 @@
       "name": "Databases",
       "level": "",
       "keywords": [
+        "PostgreSQL",
         "MySQL"
       ]
     },
@@ -215,7 +230,9 @@
       "level": "",
       "keywords": [
         "NGiNX",
-        "Apache HTTPD"
+        "Apache HTTPD",
+        "Caddy Server",
+        "Fabio"
       ]
     },
     {
@@ -243,6 +260,7 @@
         "Sensu",
         "Prometheus",
         "Grafana",
+        "OpenTelemetry",
         "Splunk",
         "Nagios/Icinga",
         "LibreNMS"
@@ -266,27 +284,27 @@
   ],
   "certificates": [
     {
-      "name": "Certified Kubernetes Administrator",
+      "name": "Certified Kubernetes Administrator (CKA)",
       "date": "2021-07-22",
       "issuer": "CNCF"
     },
     {
-      "name": "Certified Kubernetes Application Developer",
+      "name": "Certified Kubernetes Application Developer (CKAD)",
       "date": "2021-07-22",
       "issuer": "CNCF"
     },
     {
-      "name": "Certified Kubernetes Security Specialist",
+      "name": "Certified Kubernetes Security Specialist (CKS)",
       "date": "2022-07-27",
       "issuer": "CNCF"
     },
     {
-      "name": "Red Hat Certified Engineer",
+      "name": "Red Hat Certified Engineer (RHCE)",
       "date": "2014-11-07",
       "issuer": "Red Hat"
     },
     {
-      "name": "Red Hat Certified Systems Administrator",
+      "name": "Red Hat Certified Systems Administrator (RHCSA)",
       "date": "2014-11-07",
       "issuer": "Red Hat"
     }
