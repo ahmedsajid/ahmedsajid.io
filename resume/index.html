@@ -820,7 +820,7 @@ section .location {
     		</div>
     
     		<span class="location">
-    			<span class="city">Whitby,</span>
+    			<span class="city">Greater Toronto Area (GTA),</span>
     			<span class="region">Ontario</span>
     			<span class="countryCode">CA</span>
     		</span>
@@ -876,6 +876,8 @@ section .location {
     				<li>Ansible</li>
     				<li>Terraform</li>
     				<li>Pulumi</li>
+    				<li>Chef</li>
+    				<li>Packer</li>
     			</ul>
     		</div>
     		<div class="item">
@@ -905,6 +907,8 @@ section .location {
     			 			<ul class="keywords">
     				<li>Docker</li>
     				<li>Kubernetes</li>
+    				<li>Nomad</li>
+    				<li>Consul</li>
     			</ul>
     		</div>
     		<div class="item">
@@ -924,6 +928,7 @@ section .location {
     			 			<ul class="keywords">
     				<li>Jenkins</li>
     				<li>Github Actions</li>
+    				<li>Buildkite</li>
     				<li>Bazel</li>
     				<li>Make</li>
     				<li>CMake</li>
@@ -945,16 +950,19 @@ section .location {
     				Databases
     			</h3>
     			 			<ul class="keywords">
+    				<li>PostgreSQL</li>
     				<li>MySQL</li>
     			</ul>
     		</div>
     		<div class="item">
     			<h3 class="name">
-    				Web Server
+    				Web Servers and LBs
     			</h3>
     			 			<ul class="keywords">
     				<li>NGiNX</li>
     				<li>Apache HTTPD</li>
+    				<li>Caddy Server</li>
+    				<li>Fabio</li>
     			</ul>
     		</div>
     		<div class="item">
@@ -978,13 +986,14 @@ section .location {
     		</div>
     		<div class="item">
     			<h3 class="name">
-    				Logging &amp; Monitoring
+    				Observability Tools
     			</h3>
     			 			<ul class="keywords">
     				<li>Graylog</li>
     				<li>Sensu</li>
     				<li>Prometheus</li>
     				<li>Grafana</li>
+    				<li>OpenTelemetry</li>
     				<li>Splunk</li>
     				<li>Nagios/Icinga</li>
     				<li>LibreNMS</li>
@@ -1000,7 +1009,7 @@ section .location {
     		</div>
     		<div class="item">
     			<h3 class="name">
-    				Build Repositories
+    				Artifact Repositories
     			</h3>
     			 			<ul class="keywords">
     				<li>Jfrog Artifactory</li>
@@ -1011,7 +1020,7 @@ section .location {
     </section>
     <section class="section">
       <header>
-        <h2 class='section-title'>Work Experience <span class="item-count">(6)</span></h2>
+        <h2 class='section-title'>Work Experience <span class="item-count">(7)</span></h2>
       </header>
     
       <section id="work">
@@ -1019,6 +1028,35 @@ section .location {
     
             <input id="work-item-0" type="checkbox" class="toggle-item" checked="checked" />
             <label for="work-item-0"></label>
+    
+    			<header class="clear">
+    				<div class="position">DevOps Engineer</div>
+    				<div class="company">Wonolo Inc.</div>
+    				<div class="date">
+    				  <span class="startDate">Mar 2022</span>
+    					<span class="endDate">- Current</span>
+    				</div>
+    			</header>
+    
+    
+         	<div class="item" id="work-item">
+            <div class="summary"><p>Wonolo Inc. is SaaS company, providing a two-sided tech marketplace connecting companies with workers. The platform helps worker find flexible work based on their schedule.</p><p>Part of a small CloudOps team using IaC and DevOps approach in supporting Wonolo's AWS Infrastructure. The role also involves working with closely with several internal teams, providing technical support in resolving critical business challenges.</p></div>
+            <ul class="highlights">
+                <li><p>Improved Buildkite CI build time by deploying AWS Lambda functions to manage queues and workload. Previous to this change, Autoscaling was configured based on CPU utilization, which meant until the threshold was met, scale-out even didn't take place causing long wait times of sometimes up to 5 minutes. With the Lambda functions deployed, wait time was cut down to 45 second on average. This reduction in wait times resulted in quicker builds, which provided quicker deployments to production.</p></li>
+                <li><p>Upgraded Wonolo's SaaS Platform AWS Aurora PostgresSQL DB upgrade from 10 to 14. This require months of testing to ensure that the critical Production database upgrade goes smoothly, the data corruption wouldn't occur and the application still worked with the newer version of PostgresSQL engine.</p></li>
+                <li><p>Created new and existing AWS resources using Terraform. Regularly worked on writing Terraform code for AWS LBs, Lambdas, Autoscaling groups, Launch Templates, Security Groups, RDS, EC2, Translation, Cloudwatch, etc.</p></li>
+                <li><p>As a cost saving measure, worked to remove older generation EC2 instances from terraform deployments. Moved DB clusters to AWS Graviton instances, taking advantage of better price performance. Also, eliminated the need for AWS Data Migration Service for syncing production data to lower environment by switching to `pgsync` an open source tool which could be run on existing infrastructure at no additional cost.</p></li>
+                <li><p>Performed several AWS ACcount migration of Wonolo acquired businesses. This includes moving services like AWS S3, Athena and MongoDB to Wonolo managed accounts. As part of this effort, also worked on migrating Git repositories from gitlab.com to github.com.</p></li>
+                <li><p>Wonolo utilizes AWS EC2 spot instances for running production workload to keep infrastructure costs low. The production workload runs on HashiCorp Nomad which has issues with handling EC2 spot interruptions where AWS terminates the instances when their platform needs capacity. I wrote a custom spot interruption handler to ensure that when spot interruption notice was issues, Nomad worker was cordoned to avoid scheduling workload on the node providing a graceful termination scenario. This custom handler queried AWS EC2 Metadata endpoint to determine termination time, and if one was provided the node was set to be ineligible to run any new workload while draining existing workload avoiding sudden loss in workload capacity.</p></li>
+                <li><p>Part of the team project to migrate from Chef to Ansible. Wrote the initial Packer Build AMI for creating base images which included running Ansible using `ansible-pull` method. Later worked on writing Ansible Roles for deployment of Buildkite Agents and OpenTelemetry Collector including Molecule testing framework and goss.rocks server validation tooling.</p></li>
+                <li><p>Improved overall monitoring posture by integration CloudWatch for sending Slack and OnCall alerts for critical resources. Also setup metrics and dashboard in Grafana for AWS resources and CI.</p></li>
+            </ul>
+        	</div>
+        </section>
+        <section class="work-item">
+    
+            <input id="work-item-1" type="checkbox" class="toggle-item" />
+            <label for="work-item-1"></label>
     
     			<header class="clear">
     				<div class="position">Senior Site Reliability Specialist</div>
@@ -1031,7 +1069,7 @@ section .location {
     
     
          	<div class="item" id="work-item">
-            <div class="summary"><p>Kira Systems is a SaaS provide, with world's largest law firms and corporations as their clients, providing Artificial Intelligence and Machine Learning, helping in understanding the contents of their legal documents.</p><p>Part of the Core Operations team supporting both Development and Production workloads. Working closely with internal teams, providing engineering support on demand.</p></div>
+            <div class="summary"><p>Kira Systems is a SaaS provider, with world's largest law firms and corporations as their clients, providing Artificial Intelligence and Machine Learning, helping in understanding the contents of their legal documents.</p><p>Part of the Core Operations team supporting both Development and Production workloads. Working closely with internal teams, providing engineering support on demand.</p></div>
             <ul class="highlights">
                 <li><p>Maintained Infrastructure as Code deployments for Development environments and supporting services.</p></li>
                 <li><p>Increased observability of critical development infrastructure using Prometheus/Alertmanager, ensuring development teams remain focus on high business value task.</p></li>
@@ -1045,8 +1083,8 @@ section .location {
         </section>
         <section class="work-item">
     
-            <input id="work-item-1" type="checkbox" class="toggle-item" />
-            <label for="work-item-1"></label>
+            <input id="work-item-2" type="checkbox" class="toggle-item" />
+            <label for="work-item-2"></label>
     
     			<header class="clear">
     				<div class="position">Manager, Verified.Me Support</div>
@@ -1075,8 +1113,8 @@ section .location {
         </section>
         <section class="work-item">
     
-            <input id="work-item-2" type="checkbox" class="toggle-item" />
-            <label for="work-item-2"></label>
+            <input id="work-item-3" type="checkbox" class="toggle-item" />
+            <label for="work-item-3"></label>
     
     			<header class="clear">
     				<div class="position">DevOps Engineer</div>
@@ -1102,8 +1140,8 @@ section .location {
         </section>
         <section class="work-item">
     
-            <input id="work-item-3" type="checkbox" class="toggle-item" />
-            <label for="work-item-3"></label>
+            <input id="work-item-4" type="checkbox" class="toggle-item" />
+            <label for="work-item-4"></label>
     
     			<header class="clear">
     				<div class="position">Systems Administrator</div>
@@ -1128,8 +1166,8 @@ section .location {
         </section>
         <section class="work-item">
     
-            <input id="work-item-4" type="checkbox" class="toggle-item" />
-            <label for="work-item-4"></label>
+            <input id="work-item-5" type="checkbox" class="toggle-item" />
+            <label for="work-item-5"></label>
     
     			<header class="clear">
     				<div class="position">Linux Systems Engineer</div>
@@ -1154,8 +1192,8 @@ section .location {
         </section>
         <section class="work-item">
     
-            <input id="work-item-5" type="checkbox" class="toggle-item" />
-            <label for="work-item-5"></label>
+            <input id="work-item-6" type="checkbox" class="toggle-item" />
+            <label for="work-item-6"></label>
     
     			<header class="clear">
     				<div class="position">Linux System Administrator</div>
@@ -1226,7 +1264,7 @@ section .location {
           <header class="clear">
             <div class="header-left">
               <div class="title">
-                Certified Kubernetes Administrator
+                Certified Kubernetes Administrator (CKA)
               </div>
               <div class="issuer">
                 CNCF
@@ -1243,7 +1281,7 @@ section .location {
           <header class="clear">
             <div class="header-left">
               <div class="title">
-                Certified Kubernetes Application Developer
+                Certified Kubernetes Application Developer (CKAD)
               </div>
               <div class="issuer">
                 CNCF
@@ -1260,7 +1298,7 @@ section .location {
           <header class="clear">
             <div class="header-left">
               <div class="title">
-                Certified Kubernetes Security Specialist
+                Certified Kubernetes Security Specialist (CKS)
               </div>
               <div class="issuer">
                 CNCF
@@ -1277,7 +1315,7 @@ section .location {
           <header class="clear">
             <div class="header-left">
               <div class="title">
-                Red Hat Certified Engineer
+                Red Hat Certified Engineer (RHCE)
               </div>
               <div class="issuer">
                 Red Hat
@@ -1294,7 +1332,7 @@ section .location {
           <header class="clear">
             <div class="header-left">
               <div class="title">
-                Red Hat Certified Systems Administrator
+                Red Hat Certified Systems Administrator (RHCSA)
               </div>
               <div class="issuer">
                 Red Hat
