@@ -2,7 +2,8 @@
   "version": "0.4",
   "language": "en",
   "words": [
-    "Whitby",
+    "Wonolo",
+    "Greater Toronto Area",
     "Kubernetes",
     "stackoverflow",
     "CKAD",
@@ -21,6 +22,11 @@
     "Grafana",
     "Kira",
     "Kustomize",
-    "Alertmanager"
+    "Alertmanager",
+    "RHCE",
+    "RHCSA",
+    "CKA",
+    "CKAD",
+    "CKS"
   ]
 }
