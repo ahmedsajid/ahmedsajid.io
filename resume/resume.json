@@ -3,8 +3,8 @@
   "meta": {
     "theme": "stackoverflow",
     "canonical": "https://raw.githubusercontent.com/ahmedsajid/resume/main/resume.json",
-    "version": "v2.1.3",
-    "lastModified": "2023-04-02T05:00:00"
+    "version": "v2.2.0",
+    "lastModified": "2023-04-02T23:00:00"
   },
   "basics": {
     "name": "Ahmed Sajid",
@@ -13,7 +13,7 @@
     "email": "ahmed4343@hotmail.com",
     "phone": "",
     "website": "https://ahmedsajid.io",
-    "summary": "Certified Kubernetes Application Developer, Certified Kubernetes Administrator, Certified Kubernetes Security Specialist and Red Hat Certified Engineer with 11 years of experience in Tech industry, working with Web Servers, Mail Systems, High Performance Computing Clusters, Blockchain and AI/ML, with passion for automation and Open Source technologies.",
+    "summary": "Linux Foundation Certified Kubernetes Applicationn Developer, Administrator and Security Specialist (3xKubernetes Certified) with 11 years of experience in Tech, working with Web Servers, Mail Systems, High Performance Computing Clusters, Blockchain and AI/ML, with passion for automation and Open Source technologies.",
     "location": {
       "city": "Greater Toronto Area (GTA)",
       "countryCode": "CA",
