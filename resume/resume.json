@@ -3,8 +3,8 @@
   "meta": {
     "theme": "stackoverflow",
     "canonical": "https://raw.githubusercontent.com/ahmedsajid/resume/main/resume.json",
-    "version": "v2.2.0",
-    "lastModified": "2023-04-02T23:00:00"
+    "version": "v2.2.1",
+    "lastModified": "2023-04-22T08:00:00"
   },
   "basics": {
     "name": "Ahmed Sajid",
@@ -20,11 +20,6 @@
       "region": "Ontario"
     },
     "profiles": [
-      {
-        "network": "LinkedIn",
-        "username": "ahsajid",
-        "url": "https://www.linkedin.com/in/ahsajid"
-      },
       {
         "network": "GitHub",
         "username": "ahmedsajid",
