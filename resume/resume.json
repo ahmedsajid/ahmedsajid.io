@@ -3,8 +3,8 @@
   "meta": {
     "theme": "stackoverflow",
     "canonical": "https://raw.githubusercontent.com/ahmedsajid/resume/main/resume.json",
-    "version": "v2.3.0",
-    "lastModified": "2024-05-05T08:00:00"
+    "version": "v2.4.0",
+    "lastModified": "2025-01-16T22:00:00Z"
   },
   "basics": {
     "name": "Ahmed Sajid",
@@ -29,10 +29,11 @@
   },
   "work": [
     {
-      "summary": "Wonolo Inc. is SaaS company, providing a two-sided tech marketplace connecting companies with workers. The platform helps worker find flexible work based on their schedule.\nPart of a small CloudOps team using IaC and DevOps approach in supporting Wonolo's AWS Infrastructure. The role also involves working with closely with several internal teams, providing technical support in resolving critical business challenges.",
+      "summary": "Wonolo Inc. is SaaS company, providing a two-sided tech marketplace connecting companies with workers. The platform helps worker find flexible work based on their schedule.\nSolo Cloud engineer maintaining Wonolo's AWS Infrastructure. The role also involves working with closely with several internal teams, providing technical support in resolving critical business challenges.",
       "position": "Senior DevOps Engineer",
       "startDate": "2022-03-22",
       "highlights": [
+        "Migrated Wonolo's Application Proxy from unmaintained fabiolb.net to Traefik with zero impact to the customers. As part of migration process, updated 100s of Nomad Job HCLs to add Traefik configs. Made use of AWS Route53 Weighted Routing capability to follow a blue/green method to direct traffic away from Fabio to Traefik.",
         "Migrated Wonolo's Configuration management system from Chef to Ansible. Wrote the Packer Build AMI for creating base images which included running Ansible using `ansible-pull` method. Later worked on writing Ansible Roles for deployment of Buildkite Agents and OpenTelemetry Collector including Molecule testing framework and goss.rocks server validation tooling. Performed migration in production environment with no customer impact while ensuring stability of existing platform.",
         "Improved Buildkite CI build time by deploying AWS Lambda functions to manage queues and workload. Previous to this change, Autoscaling was configured based on CPU utilization, which meant until the threshold was met, scale-out even didn't take place causing long wait times of sometimes up to 5 minutes. With the Lambda functions deployed, wait time was cut down to 45 second on average. This reduction in wait times resulted in quicker builds, which provided quicker deployments to production.",
         "Upgraded Wonolo's SaaS Platform AWS Aurora PostgresSQL DB upgrade from 10 to 14. This require months of testing to ensure that the critical Production database upgrade goes smoothly, the data corruption wouldn't occur and the application still worked with the newer version of PostgresSQL engine.",
@@ -175,6 +176,7 @@
       "level": "",
       "keywords": [
         "AWS",
+        "GCP",
         "DigitalOcean"
       ]
     },
@@ -185,7 +187,9 @@
         "Docker",
         "Kubernetes",
         "Nomad",
-        "Consul"
+        "ECS",
+        "EKS",
+        "GKE"
       ]
     },
     {
@@ -204,6 +208,7 @@
         "Jenkins",
         "Github Actions",
         "Buildkite",
+        "skaffold",
         "Bazel",
         "Make",
         "CMake"
@@ -215,7 +220,7 @@
       "keywords": [
         "RHEL",
         "CentOS",
-        "Ubuntu Desktop",
+        "Ubuntu",
         "Rocky Linux"
       ]
     },
@@ -233,6 +238,7 @@
       "keywords": [
         "NGiNX",
         "Apache HTTPD",
+        "Traefik",
         "Caddy Server",
         "Fabio"
       ]
