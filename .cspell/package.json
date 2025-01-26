@@ -4,6 +4,6 @@
     "spellcheck:web": "cspell ../content/**/*.md"
   },
   "devDependencies": {
-    "cspell": "^5.13.1"
+    "cspell": "^8.0.0"
   }
 }
