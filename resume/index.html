@@ -1,12 +1,12 @@
 <!doctype html>
 <html>
   <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>Ahmed Sajid</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
-  <style>
-  /********************************************
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Ahmed Sajid</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      /********************************************
 * 	reset from
 * 	http://meyerweb.com/eric/tools/css/reset/
 *******************************************/
@@ -152,7 +152,6 @@ html {
   letter-spacing: 0;
   line-height: 1.46153846;
   text-align: left;
-  -webkit-text-size-adjust: 100%;
 }
 
 p {
@@ -191,10 +190,6 @@ em {
   color: #757575;
 }
 
-blockquote {
-  margin-bottom: 1em;
-}
-
 strong {
   font-weight: 700;
 }
@@ -223,6 +218,10 @@ section .location {
 
 #profiles .item {
   padding: 0;
+}
+
+#header {
+  margin-bottom: 1rem;
 }
 
 #header > #profiles,
@@ -267,10 +266,13 @@ section .location {
   border-radius: 4px;
 }
 
+.section.summary header {
+  margin-top: 1rem;
+}
+
 .main-summary {
   background: #f1f8ff;
   padding: 1.2em 1em;
-  margin-top: 1rem;
 }
 
 .main-summary p {
@@ -339,8 +341,7 @@ section .location {
 .area,
 .studyType,
 .title,
-.awarder,
-.issuer {
+.awarder {
   display: inline;
 }
 
@@ -360,15 +361,10 @@ section .location {
   content: "at ";
 }
 
-.issuer::before {
-  content: "by ";
-}
-
 .company,
 .institution,
 .organization,
-.awarder,
-.issuer {
+.awarder {
   color: #606d76;
   font-weight: 400;
 }
@@ -576,15 +572,12 @@ section .location {
 
 #references .item {
   padding-left: 0.5em;
+  margin-bottom: 1em;
   border-left: 5px solid #ff6d1f;
 }
 
-.toggle-item {
-  display: none;
-}
-
 .section > section > section {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 /******************
@@ -637,39 +630,10 @@ section .location {
   .section > section:not(.main-summary) {
     margin-left: 1.67rem;
   }
-  .toggle-item {
-    transform: translate(-9999px);
-  }
-  .toggle-item + label {
-    display: block;
-  }
-  .toggle-item:checked + label:after {
-    content: "\f0d7";
-  }
-  .toggle-item + label:after {
-    float: left;
-    cursor: pointer;
-    margin-left: -20px;
-    color: #aaa;
-    font-size: 16px;
-    font-weight: 900;
-    font-family: "Font Awesome 5 Free";
-    content: "\f0da";
-  }
-  .toggle-item ~ .item {
-    height: 0;
-    opacity: 0;
-  }
-  .toggle-item:checked ~ .item {
-    height: auto;
-    opacity: 1;
-    transition: all 0.5s linear;
-  }
   .company::before,
   .institution::before,
   .organization::before,
-  .awarder::before,
-  .issuer::before {
+  .awarder::before {
     content: "| ";
   }
   .header-left {
@@ -689,8 +653,14 @@ section .location {
 }
 
 @media print {
-  a:not(.hide-href-print)::after{
+  #profiles a:not(.hide-href-print)::after{
     content: " (" attr(href) ") ";
+  }
+  #profiles .url .show-only-url-print {
+    display: none;
+  }
+  #profiles .url a::after {
+    content: attr(href);
   }
   #resume {
     margin: 0.1em;
@@ -705,14 +675,14 @@ section .location {
   .item-count {
     display: none;
   }
+  .company a {
+    color: #40484f;
+  }
   .company::before,
   .institution::before,
   .organization::before,
   .awarder::before {
     content: "at ";
-  }
-  .issuer::before {
-    content: "by ";
   }
   .main-summary {
     padding: 0;
@@ -729,7 +699,8 @@ section .location {
     padding-bottom: 0.15rem;
   }
   .section > section > section {
-    margin: 0 0 1em 0;
+    border-bottom: 1px solid #fdfdfd;
+    margin: .5em 0;
   }
   .section > section > section:last-of-type {
     margin: 0;
@@ -757,7 +728,7 @@ section .location {
   ul.keywords li::after,
   ul.courses li::after {
     padding: 0 0 0 0.1rem;
-    content: " |";
+    content: ", ";
   }
   ul.keywords::before,
   ul.courses::before {
@@ -765,14 +736,28 @@ section .location {
     font-weight: 600;
   }
   #skills .item {
-    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    margin: 0.3rem 0;
     padding: 0;
+  }
+  #skills .level {
+    margin: 0.1rem 0;
+    font-weight: 400;
+  }
+  #skills .keywords {
+    font-size: 0.9rem;
+    margin: 0;
   }
   .highlights {
     margin: 0.5em 0 0 0;
   }
+  .highlights > li > p {
+    margin-bottom: 0.3em;
+  }
   ul.keywords::before {
-    content: "Skills acquired: ";
+    content: "Skills: ";
+    font-size: 1rem;
   }
   #skills .keywords::before {
     content: none;
@@ -783,6 +768,12 @@ section .location {
   }
   ul.courses::before {
     content: "Major courses: ";
+    font-size: 1rem;
+  }
+  ul.keywords li,
+  ul.courses li {
+    font-size: 1rem;
+    line-height: inherit;
   }
   ul.keywords li:last-of-type::after,
   ul.courses li:last-of-type::after {
@@ -802,543 +793,510 @@ section .location {
     display: block;
     opacity: 1 !important;
   }
-  .fa-map-marker-alt:before {
+  .fa-location-dot:before {
     padding-left: 0.1em;
   }
 }
 
-  </style>
-  
+    </style>
   </head>
   <body>
-  
-  <div id="resume">
-    	<header id="header" class="clear">
-    		<div>
-    			<h1 class="name">Ahmed Sajid</h1>
-    			<h2 class="label">DevOps | SRE | CKA, CKAD &amp; CKS</h2>
-    		</div>
-    
-    		<span class="location">
-    			<span class="city">Greater Toronto Area (GTA),</span>
-    			<span class="region">Ontario</span>
-    			<span class="countryCode">CA</span>
-    		</span>
-    
-    
-    		<div id="contact">
-    			<div class="website">
-    				<span class="fas fa-external-link-alt"></span>
-    				<a class="hide-href-print" target="_blank" target="_blank" href="https://ahmedsajid.io">https://ahmedsajid.io</a>
-    			</div>
-    			<div class="email">
-    				<span class="far fa-envelope"></span>
-    				<a class="hide-href-print" href="mailto:ahmed4343@hotmail.com">ahmed4343@hotmail.com</a>
-    			</div>
-    		</div>
-    
-    		<div id="profiles">
-    			<div class="item">
-    				<div class="username">
-    					<span class="fab fa-github github social"></span>
-    					<span class="url">
-    						<a target="_blank" href="https://github.com/ahmedsajid">ahmedsajid</a>
-    					</span>
-    				</div>
-    			</div>
-    		</div>
-    	</header>
-    
-    	<section class="section">
-    		<section class="main-summary">
-    			<div><p>Linux Foundation Certified Kubernetes Application Developer, Administrator and Security Specialist (3 x Kubernetes Certified) with 12 years of experience in Tech, working with Web Servers, Mail Systems, High Performance Computing Clusters, Blockchain and AI/ML, with passion for automation and Open Source technologies.</p></div>
-    		</section>
-    	</section>
-    
-    <section class="section">
-    	<header>
-    		<h2 class='section-title'>Skills</h2>
-    	</header>
-    	<section id="skills">
-    		<div class="item">
-    			<h3 class="name">
-    				IAC and Configuration Management Tools
-    			</h3>
-    			 			<ul class="keywords">
-    				<li>Ansible</li>
-    				<li>Terraform</li>
-    				<li>Pulumi</li>
-    				<li>Chef</li>
-    				<li>Packer</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Version Control
-    			</h3>
-    			 			<ul class="keywords">
-    				<li>Git</li>
-    				<li>GitHub</li>
-    				<li>GitLab</li>
-    				<li>SVN</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Cloud
-    			</h3>
-    			 			<ul class="keywords">
-    				<li>AWS</li>
-    				<li>DigitalOcean</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Container
-    			</h3>
-    			 			<ul class="keywords">
-    				<li>Docker</li>
-    				<li>Kubernetes</li>
-    				<li>Nomad</li>
-    				<li>Consul</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Scripting
-    			</h3>
-    			 			<ul class="keywords">
-    				<li>BASH</li>
-    				<li>Python</li>
-    				<li>Groovy</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				CI and Build Tools
-    			</h3>
-    			 			<ul class="keywords">
-    				<li>Jenkins</li>
-    				<li>Github Actions</li>
-    				<li>Buildkite</li>
-    				<li>Bazel</li>
-    				<li>Make</li>
-    				<li>CMake</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Linux Operating System
-    			</h3>
-    			 			<ul class="keywords">
-    				<li>RHEL</li>
-    				<li>CentOS</li>
-    				<li>Ubuntu Desktop</li>
-    				<li>Rocky Linux</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Databases
-    			</h3>
-    			 			<ul class="keywords">
-    				<li>PostgreSQL</li>
-    				<li>MySQL</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Web Servers and LBs
-    			</h3>
-    			 			<ul class="keywords">
-    				<li>NGiNX</li>
-    				<li>Apache HTTPD</li>
-    				<li>Caddy Server</li>
-    				<li>Fabio</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Security
-    			</h3>
-    			 			<ul class="keywords">
-    				<li>OpenSSL</li>
-    				<li>PKI</li>
-    				<li>SSL/TLS Certificates</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Collaboration Tools
-    			</h3>
-    			 			<ul class="keywords">
-    				<li>JIRA</li>
-    				<li>Confluence</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Observability Tools
-    			</h3>
-    			 			<ul class="keywords">
-    				<li>Cloudwatch</li>
-    				<li>Graylog</li>
-    				<li>Sensu</li>
-    				<li>Prometheus</li>
-    				<li>Grafana</li>
-    				<li>OpenTelemetry</li>
-    				<li>Splunk</li>
-    				<li>Nagios/Icinga</li>
-    				<li>LibreNMS</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Blockchain
-    			</h3>
-    			 			<ul class="keywords">
-    				<li>Hyperledger Fabric</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Artifact Repositories
-    			</h3>
-    			 			<ul class="keywords">
-    				<li>Jfrog Artifactory</li>
-    				<li>Nexus</li>
-    			</ul>
-    		</div>
-    	</section>
-    </section>
-    <section class="section">
-      <header>
-        <h2 class='section-title'>Work Experience <span class="item-count">(7)</span></h2>
-      </header>
-    
-      <section id="work">
-        <section class="work-item">
-    
-            <input id="work-item-0" type="checkbox" class="toggle-item" checked="checked" />
-            <label for="work-item-0"></label>
-    
-    			<header class="clear">
-    				<div class="position">Senior DevOps Engineer</div>
-    				<div class="company">Wonolo Inc.</div>
-    				<div class="date">
-    				  <span class="startDate">Mar 2022</span>
-    					<span class="endDate">- Current</span>
-    				</div>
-    			</header>
-    
-    
-         	<div class="item" id="work-item">
-            <div class="summary"><p>Wonolo Inc. is SaaS company, providing a two-sided tech marketplace connecting companies with workers. The platform helps worker find flexible work based on their schedule.</p><p>Part of a small CloudOps team using IaC and DevOps approach in supporting Wonolo's AWS Infrastructure. The role also involves working with closely with several internal teams, providing technical support in resolving critical business challenges.</p></div>
-            <ul class="highlights">
-                <li><p>Migrated Wonolo's Configuration management system from Chef to Ansible. Wrote the Packer Build AMI for creating base images which included running Ansible using `ansible-pull` method. Later worked on writing Ansible Roles for deployment of Buildkite Agents and OpenTelemetry Collector including Molecule testing framework and goss.rocks server validation tooling. Performed migration in production environment with no customer impact while ensuring stability of existing platform.</p></li>
-                <li><p>Improved Buildkite CI build time by deploying AWS Lambda functions to manage queues and workload. Previous to this change, Autoscaling was configured based on CPU utilization, which meant until the threshold was met, scale-out even didn't take place causing long wait times of sometimes up to 5 minutes. With the Lambda functions deployed, wait time was cut down to 45 second on average. This reduction in wait times resulted in quicker builds, which provided quicker deployments to production.</p></li>
-                <li><p>Upgraded Wonolo's SaaS Platform AWS Aurora PostgresSQL DB upgrade from 10 to 14. This require months of testing to ensure that the critical Production database upgrade goes smoothly, the data corruption wouldn't occur and the application still worked with the newer version of PostgresSQL engine.</p></li>
-                <li><p>Created new and existing AWS resources using Terraform. Regularly worked on writing Terraform code for AWS LBs, Lambdas, Autoscaling groups, Launch Templates, Security Groups, RDS, EC2, Translation, Cloudwatch, etc.</p></li>
-                <li><p>As a cost saving measure, worked to remove older generation EC2 instances from terraform deployments. Moved DB clusters to AWS Graviton instances, taking advantage of better price performance. Also, eliminated the need for AWS Data Migration Service for syncing production data to lower environment by switching to `pgsync` an open source tool which could be run on existing infrastructure at no additional cost.</p></li>
-                <li><p>Performed several AWS Account migration of Wonolo acquired businesses. This includes moving services like AWS S3, Athena and MongoDB to Wonolo managed accounts. As part of this effort, also worked on migrating Git repositories from gitlab.com to github.com.</p></li>
-                <li><p>Wonolo utilizes AWS EC2 spot instances for running production workload to keep infrastructure costs low. The production workload runs on HashiCorp Nomad which has issues with handling EC2 spot interruptions where AWS terminates the instances when their platform needs capacity. I wrote a custom spot interruption handler to ensure that when spot interruption notice was issues, Nomad worker was cordoned to avoid scheduling workload on the node providing a graceful termination scenario. This custom handler queried AWS EC2 Metadata endpoint to determine termination time, and if one was provided the node was set to be ineligible to run any new workload while draining existing workload avoiding sudden loss in workload capacity.</p></li>
-                <li><p>Improved overall monitoring posture by integration CloudWatch for sending Slack and OnCall alerts for critical resources. Also setup metrics and dashboard in Grafana for AWS resources and CI.</p></li>
-            </ul>
-        	</div>
-        </section>
-        <section class="work-item">
-    
-            <input id="work-item-1" type="checkbox" class="toggle-item" />
-            <label for="work-item-1"></label>
-    
-    			<header class="clear">
-    				<div class="position">Senior Site Reliability Specialist</div>
-    				<div class="company">Kira Systems Inc.</div>
-    				<div class="date">
-    				  <span class="startDate">Oct 2021</span>
-    					<span class="endDate">- Mar 2022</span>
-    				</div>
-    			</header>
-    
-    
-         	<div class="item" id="work-item">
-            <div class="summary"><p>Kira Systems is a SaaS provider, with world's largest law firms and corporations as their clients, providing Artificial Intelligence and Machine Learning, helping in understanding the contents of their legal documents.</p><p>Part of the Core Operations team supporting both Development and Production workloads. Working closely with internal teams, providing engineering support on demand.</p></div>
-            <ul class="highlights">
-                <li><p>Maintained Infrastructure as Code deployments for Development environments and supporting services.</p></li>
-                <li><p>Increased observability of critical development infrastructure using Prometheus/Alertmanager, ensuring development teams remain focus on high business value task.</p></li>
-                <li><p>Updated Jenkins Infrastructure and CI pipelines to decrease build failures and provide higher reliability.</p></li>
-                <li><p>Reduced CI build time in Jenkins for the main monorepo, consisting of 80 plus individual components, from 1 hour 40 minutes to 58 minutes by simply rewriting the pipeline running parallel batches building interdependent components to fully parallelized locking based approach. This ensured that compute resources were utilized for the maximum amount of time, while reducing CI build time by 40%, accelerating software development cycle resulting in faster releases to production.</p></li>
-                <li><p>Spearheaded several initiatives successfully to reduce technical debt.</p></li>
-                <li><p>Wrote Github Action automation bots in Python for development CI process to enforcing security requirements.</p></li>
-                <li><p>As the senior team member, provided technical assistance to members regularly.</p></li>
-            </ul>
-        	</div>
-        </section>
-        <section class="work-item">
-    
-            <input id="work-item-2" type="checkbox" class="toggle-item" />
-            <label for="work-item-2"></label>
-    
-    			<header class="clear">
-    				<div class="position">Manager, Verified.Me Support</div>
-    				<div class="company">SecureKey Technologies Inc.</div>
-    				<div class="date">
-    				  <span class="startDate">May 2019</span>
-    					<span class="endDate">- Oct 2021</span>
-    				</div>
-    			</header>
-    
-    
-         	<div class="item" id="work-item">
-            <div class="summary"><p>SecureKey is an Identity and authentication provider with Canadian Federal, Provincial Governments and Fintechs as clients and partners.</p><p>Led SecureKey's Verified.Me Identity Verification Service's Level 3 support team. Member of the engineering team tasked with implementing automation and resolving day-to-day technical challenges. Heavily contributed in technical projects ensuring timely achievement of objectives.</p></div>
-            <ul class="highlights">
-                <li><p>Started as a Level 3 Team Lead being promoted to Manager within a few months.</p></li>
-                <li><p>Involved in calls to help high value clients, addressing technical and integration issues.</p></li>
-                <li><p>Part of project management team, working through several coordinated upgrades and migrations.</p></li>
-                <li><p>Assisted developers in solving deployment related issues with docker-compose.</p></li>
-                <li><p>Converted docker-compose based local development deployment to Kubernetes compatible Kustomize deployment.</p></li>
-                <li><p>Wrote and maintained CI/CD pipelines to accelerate both test and development process, enabling faster release to Production.</p></li>
-                <li><p>Implemented CI pipelines for deployment code repositories, a stepping stone towards GitOps.</p></li>
-                <li><p>Created Analytics pipeline using only server and application logs which provided much needed visibility into user transaction flows, filling software implementation gaps. This pipeline was further utilized for troubleshooting and discovering issues within the distributed system.</p></li>
-                <li><p>Created Analytics Dashboard for Production system usage. Python code was used for extracting information from database, transforming the data to required format and exposing it via API endpoint.</p></li>
-            </ul>
-        	</div>
-        </section>
-        <section class="work-item">
-    
-            <input id="work-item-3" type="checkbox" class="toggle-item" />
-            <label for="work-item-3"></label>
-    
-    			<header class="clear">
-    				<div class="position">DevOps Engineer</div>
-    				<div class="company">SecureKey Technologies Inc.</div>
-    				<div class="date">
-    				  <span class="startDate">Oct 2016</span>
-    					<span class="endDate">- May 2019</span>
-    				</div>
-    			</header>
-    
-    
-         	<div class="item" id="work-item">
-            <div class="summary"><p>Part of a small DevOps team tasked with developing Platform, writing Infrastructure-as-Code and configuration management; enabling deployment of SecureKey's new Blockchain based Identity Verification Service, Verified.Me.</p></div>
-            <ul class="highlights">
-                <li><p>Used tools such as Git, Terraform, Ansible, Jenkins and Docker for deployments.</p></li>
-                <li><p>Wrote and maintained Infrastructure as a Code repositories for automated deployments on both on-perm and cloud infrastructure.</p></li>
-                <li><p>Build and shipped secure Docker images to clients and partners as part of regular release process.</p></li>
-                <li><p>Assisted clients with technical issues ranging from service related as well as client's internal networking issues.</p></li>
-                <li><p>Assisted in redesigning client network architecture.</p></li>
-                <li><p>As Subject Matter Expert of Verified.Me, I was regularly consulted for L2/L3 support.</p></li>
-            </ul>
-        	</div>
-        </section>
-        <section class="work-item">
-    
-            <input id="work-item-4" type="checkbox" class="toggle-item" />
-            <label for="work-item-4"></label>
-    
-    			<header class="clear">
-    				<div class="position">Systems Administrator</div>
-    				<div class="company">SecureKey Technologies Inc.</div>
-    				<div class="date">
-    				  <span class="startDate">Jun 2016</span>
-    					<span class="endDate">- Oct 2016</span>
-    				</div>
-    			</header>
-    
-    
-         	<div class="item" id="work-item">
-            <div class="summary"><p>Joined as a Systems Administrator Supporting SecureKey's Government Sign-in by Verified.Me Service. After recognizing my skills and passion for automation; I was offered the role of DevOps Engineer and joined the Engineering team after 4 months being part of Production Support Team.</p></div>
-            <ul class="highlights">
-                <li><p>Day-to-Day operations and maintenance of the server infrastructure supporting cloud services with a focus on Red Hat Linux, JAVA application servers, MySQL, and VMWare ESX.</p></li>
-                <li><p>Implemented production changes in out-of-hours maintenance windows.</p></li>
-                <li><p>On-call for critical incident support on a rotational basis.</p></li>
-                <li><p>Provided input to post implementation reviews and RCAs.</p></li>
-                <li><p>Managed issues using an ITIL-compliant ticketing system.</p></li>
-            </ul>
-        	</div>
-        </section>
-        <section class="work-item">
-    
-            <input id="work-item-5" type="checkbox" class="toggle-item" />
-            <label for="work-item-5"></label>
-    
-    			<header class="clear">
-    				<div class="position">Linux Systems Engineer</div>
-    				<div class="company">Integra Technologies FZE</div>
-    				<div class="date">
-    				  <span class="startDate">Aug 2015</span>
-    					<span class="endDate">- Mar 2016</span>
-    				</div>
-    			</header>
-    
-    
-         	<div class="item" id="work-item">
-            <div class="summary"><p>Integra Technologies is a Red Hat Advanced Partner and AWS Standard Consulting Partner that focuses on Linux based solutions for enterprises.</p><p>Part of a small team providing consultancy services to wide range of clientele such as Telecom Service Providers, Educational Institutions, Airports, Airlines, Automotive Dealerships, Food Services, and Healthcare sector.</p></div>
-            <ul class="highlights">
-                <li><p>Installed and provided support for all Red Hat products such as Red Hat Enterprise Linux, Red Hat Satellite, Red Hat High Availability Clusters.</p></li>
-                <li><p>Met with potential clients to discuss their IT enterprise needs.</p></li>
-                <li><p>Provided 24/7 on-call support to clients on daily basis.</p></li>
-                <li><p>Performed remote troubleshooting to effectively resolve technical issues faced by the clients.</p></li>
-                <li><p>Provided clients with project specifications and technical documentations.</p></li>
-            </ul>
-        	</div>
-        </section>
-        <section class="work-item">
-    
-            <input id="work-item-6" type="checkbox" class="toggle-item" />
-            <label for="work-item-6"></label>
-    
-    			<header class="clear">
-    				<div class="position">Linux System Administrator</div>
-    				<div class="company">Science and Technology Facilities Council</div>
-    				<div class="date">
-    				  <span class="startDate">Jul 2012</span>
-    					<span class="endDate">- Jul 2015</span>
-    				</div>
-    			</header>
-    
-    
-         	<div class="item" id="work-item">
-            <div class="summary"><p>One of Europe’s largest multidisciplinary research organizations.</p><p>Part of a small but dedicated operations team administering hundreds of thousands of servers part of High Performance Computing Cluster. These resources were used within the organization and also by the wider UK academic research community including prestigious research universities.</p></div>
-            <ul class="highlights">
-                <li><p>Administered CPU and GPU RHEL based compute clusters for UK academia.</p></li>
-                <li><p>Provisioned new hardware equipment including PDUs, Servers, Network switches.</p></li>
-                <li><p>Benchmarked new High Performance Computing cluster to determine peak performance.</p></li>
-                <li><p>Handled complex tasks on daily basis, ranging from simple login issues, expired server and client certificates to more involved such as troubleshooting MTU misconfiguration on network switches.</p></li>
-                <li><p>Liaised with vendors for replacement of faulty hardware.</p></li>
-            </ul>
-        	</div>
-        </section>
-      </section>
-    </section>
-    <section class="section">
-      <header>
-        <h2 class='section-title'>Education <span class="item-count">(1)</span></h2>
-      </header>
-    
-      <section id="education">
-        <section class="education-item">
-          <header class="clear">
-            <div class="header-left">
-              <div class="studyType">
-                Bachelor of Engineering
-              </div>
-              <div class="area">
-                Communications Engineering
-              </div>
-              <div class="institution">
-                Coventry University
-              </div>
-            </div>
-            <div class="date">
-              <span class="startDate">
-              2008
-              </span>
-              <span class="endDate">
-              - 2012
-              </span>
-            </div>
+    <div id="resume">
+      	<header id="header" class="clear">
+      		<div>
+      			<h1 class="name">Ahmed Sajid</h1>
+      			<h2 class="label">DevOps | SRE | CKA, CKAD &amp; CKS</h2>
+      		</div>
+      
+      		<span class="location">
+      			<span class="city">Greater Toronto Area (GTA),</span>
+      			<span class="region">Ontario</span>
+      			<span class="countryCode">(CA)</span>
+      		</span>
+      
+      
+      		<div id="contact">
+      			<div class="website">
+      				<span class="fa-solid fa-up-right-from-square"></span>
+      				<a class="hide-href-print" target="_blank" target="_blank" href="https://ahmedsajid.io">https://ahmedsajid.io</a>
+      			</div>
+      			<div class="email">
+      				<span class="fa-regular fa-envelope"></span>
+      				<a class="hide-href-print" href="mailto:ahmed4343@hotmail.com">ahmed4343@hotmail.com</a>
+      			</div>
+      		</div>
+      
+      		<div id="profiles">
+      			<div class="item">
+      				<div class="username">
+      					<span class="fa-brands fa-github github social"></span>
+      					<span class="url">
+      						<a target="_blank" href="https://github.com/ahmedsajid"><span class="show-only-url-print">ahmedsajid</span></a>
+      					</span>
+      				</div>
+      			</div>
+      		</div>
+      	</header>
+      
+      	<section class="section summary">
+          <header>
+            <h2 class="section-title">summary</h2>
           </header>
-    
-    
-    
+      		<section class="main-summary">
+      			<div><p><p>Linux Foundation Certified Kubernetes Application Developer, Administrator and Security Specialist (3 x Kubernetes Certified) with 12 years of experience in Tech, working with Web Servers, Mail Systems, High Performance Computing Clusters, Blockchain and AI/ML, with passion for automation and Open Source technologies.</p></p></div>
+      		</section>
+      	</section>
+      
+      <section class="section">
+        <header>
+          <h2 class='section-title'>Skills</h2>
+        </header>
+        <section id="skills">
           <div class="item">
+            <h3 class="name">
+              IAC and Configuration Management Tools
+            </h3>
+            <ul class="keywords">
+              <li>Ansible</li>
+              <li>Terraform</li>
+              <li>Pulumi</li>
+              <li>Chef</li>
+              <li>Packer</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              Version Control
+            </h3>
+            <ul class="keywords">
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>GitLab</li>
+              <li>SVN</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              Cloud
+            </h3>
+            <ul class="keywords">
+              <li>AWS</li>
+              <li>DigitalOcean</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              Container
+            </h3>
+            <ul class="keywords">
+              <li>Docker</li>
+              <li>Kubernetes</li>
+              <li>Nomad</li>
+              <li>Consul</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              Scripting
+            </h3>
+            <ul class="keywords">
+              <li>BASH</li>
+              <li>Python</li>
+              <li>Groovy</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              CI and Build Tools
+            </h3>
+            <ul class="keywords">
+              <li>Jenkins</li>
+              <li>Github Actions</li>
+              <li>Buildkite</li>
+              <li>Bazel</li>
+              <li>Make</li>
+              <li>CMake</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              Linux Operating System
+            </h3>
+            <ul class="keywords">
+              <li>RHEL</li>
+              <li>CentOS</li>
+              <li>Ubuntu Desktop</li>
+              <li>Rocky Linux</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              Databases
+            </h3>
+            <ul class="keywords">
+              <li>PostgreSQL</li>
+              <li>MySQL</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              Web Servers and LBs
+            </h3>
+            <ul class="keywords">
+              <li>NGiNX</li>
+              <li>Apache HTTPD</li>
+              <li>Caddy Server</li>
+              <li>Fabio</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              Security
+            </h3>
+            <ul class="keywords">
+              <li>OpenSSL</li>
+              <li>PKI</li>
+              <li>SSL/TLS Certificates</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              Collaboration Tools
+            </h3>
+            <ul class="keywords">
+              <li>JIRA</li>
+              <li>Confluence</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              Observability Tools
+            </h3>
+            <ul class="keywords">
+              <li>Cloudwatch</li>
+              <li>Graylog</li>
+              <li>Sensu</li>
+              <li>Prometheus</li>
+              <li>Grafana</li>
+              <li>OpenTelemetry</li>
+              <li>Splunk</li>
+              <li>Nagios/Icinga</li>
+              <li>LibreNMS</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              Blockchain
+            </h3>
+            <ul class="keywords">
+              <li>Hyperledger Fabric</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3 class="name">
+              Artifact Repositories
+            </h3>
+            <ul class="keywords">
+              <li>Jfrog Artifactory</li>
+              <li>Nexus</li>
+            </ul>
           </div>
         </section>
       </section>
-    </section>
-    <section class="section">
-      <header>
-        <h2 class='section-title'>Certification <span class="item-count">(5)</span></h2>
-      </header>
-      <section id="certificates">
-        <section class="certificate-item">
-          <label for="certificate-item-0"></label>
-          <header class="clear">
-            <div class="header-left">
-              <div class="title">
-                Certified Kubernetes Administrator (CKA)
-              </div>
-              <div class="issuer">
-                CNCF
-              </div>
+      <section class="section">
+        <header>
+          <h2 class='section-title'>Work Experience <span class="item-count">(7)</span></h2>
+        </header>
+      
+        <section id="work">
+          <section class="work-item">
+              <label for="work-item-0"></label>
+              <header class="clear">
+                  <div class="date">
+                    <span class="startDate">Mar 2022</span>
+                      <span class="endDate">- Current</span>
+                  </div>
+                <div class="position">Senior DevOps Engineer</div>
+                  <div class="company">Wonolo Inc.</div>
+              </header>
+             <div class="item" id="work-item">
+              <div class="summary"><p><p>Wonolo Inc. is SaaS company, providing a two-sided tech marketplace connecting companies with workers. The platform helps worker find flexible work based on their schedule.</p><p>Part of a small CloudOps team using IaC and DevOps approach in supporting Wonolo's AWS Infrastructure. The role also involves working with closely with several internal teams, providing technical support in resolving critical business challenges.</p></p></div>
+              <ul class="highlights">
+                <li><p><p>Migrated Wonolo's Configuration management system from Chef to Ansible. Wrote the Packer Build AMI for creating base images which included running Ansible using <code>ansible-pull</code> method. Later worked on writing Ansible Roles for deployment of Buildkite Agents and OpenTelemetry Collector including Molecule testing framework and goss.rocks server validation tooling. Performed migration in production environment with no customer impact while ensuring stability of existing platform.</p></p></li>
+                <li><p><p>Improved Buildkite CI build time by deploying AWS Lambda functions to manage queues and workload. Previous to this change, Autoscaling was configured based on CPU utilization, which meant until the threshold was met, scale-out even didn't take place causing long wait times of sometimes up to 5 minutes. With the Lambda functions deployed, wait time was cut down to 45 second on average. This reduction in wait times resulted in quicker builds, which provided quicker deployments to production.</p></p></li>
+                <li><p><p>Upgraded Wonolo's SaaS Platform AWS Aurora PostgresSQL DB upgrade from 10 to 14. This require months of testing to ensure that the critical Production database upgrade goes smoothly, the data corruption wouldn't occur and the application still worked with the newer version of PostgresSQL engine.</p></p></li>
+                <li><p><p>Created new and existing AWS resources using Terraform. Regularly worked on writing Terraform code for AWS LBs, Lambdas, Autoscaling groups, Launch Templates, Security Groups, RDS, EC2, Translation, Cloudwatch, etc.</p></p></li>
+                <li><p><p>As a cost saving measure, worked to remove older generation EC2 instances from terraform deployments. Moved DB clusters to AWS Graviton instances, taking advantage of better price performance. Also, eliminated the need for AWS Data Migration Service for syncing production data to lower environment by switching to <code>pgsync</code> an open source tool which could be run on existing infrastructure at no additional cost.</p></p></li>
+                <li><p><p>Performed several AWS Account migration of Wonolo acquired businesses. This includes moving services like AWS S3, Athena and MongoDB to Wonolo managed accounts. As part of this effort, also worked on migrating Git repositories from gitlab.com to github.com.</p></p></li>
+                <li><p><p>Wonolo utilizes AWS EC2 spot instances for running production workload to keep infrastructure costs low. The production workload runs on HashiCorp Nomad which has issues with handling EC2 spot interruptions where AWS terminates the instances when their platform needs capacity. I wrote a custom spot interruption handler to ensure that when spot interruption notice was issues, Nomad worker was cordoned to avoid scheduling workload on the node providing a graceful termination scenario. This custom handler queried AWS EC2 Metadata endpoint to determine termination time, and if one was provided the node was set to be ineligible to run any new workload while draining existing workload avoiding sudden loss in workload capacity.</p></p></li>
+                <li><p><p>Improved overall monitoring posture by integration CloudWatch for sending Slack and OnCall alerts for critical resources. Also setup metrics and dashboard in Grafana for AWS resources and CI.</p></p></li>
+              </ul>
             </div>
-    
-            <div class="date">
-              2021
+          </section>
+          <section class="work-item">
+              <label for="work-item-1"></label>
+              <header class="clear">
+                  <div class="date">
+                    <span class="startDate">Oct 2021</span>
+                      <span class="endDate">- Mar 2022</span>
+                  </div>
+                <div class="position">Senior Site Reliability Specialist</div>
+                  <div class="company">Kira Systems Inc.</div>
+              </header>
+             <div class="item" id="work-item">
+              <div class="summary"><p><p>Kira Systems is a SaaS provider, with world's largest law firms and corporations as their clients, providing Artificial Intelligence and Machine Learning, helping in understanding the contents of their legal documents.</p><p>Part of the Core Operations team supporting both Development and Production workloads. Working closely with internal teams, providing engineering support on demand.</p></p></div>
+              <ul class="highlights">
+                <li><p><p>Maintained Infrastructure as Code deployments for Development environments and supporting services.</p></p></li>
+                <li><p><p>Increased observability of critical development infrastructure using Prometheus/Alertmanager, ensuring development teams remain focus on high business value task.</p></p></li>
+                <li><p><p>Updated Jenkins Infrastructure and CI pipelines to decrease build failures and provide higher reliability.</p></p></li>
+                <li><p><p>Reduced CI build time in Jenkins for the main monorepo, consisting of 80 plus individual components, from 1 hour 40 minutes to 58 minutes by simply rewriting the pipeline running parallel batches building interdependent components to fully parallelized locking based approach. This ensured that compute resources were utilized for the maximum amount of time, while reducing CI build time by 40%, accelerating software development cycle resulting in faster releases to production.</p></p></li>
+                <li><p><p>Spearheaded several initiatives successfully to reduce technical debt.</p></p></li>
+                <li><p><p>Wrote Github Action automation bots in Python for development CI process to enforcing security requirements.</p></p></li>
+                <li><p><p>As the senior team member, provided technical assistance to members regularly.</p></p></li>
+              </ul>
             </div>
-          </header>
-        </section>
-        <section class="certificate-item">
-          <label for="certificate-item-1"></label>
-          <header class="clear">
-            <div class="header-left">
-              <div class="title">
-                Certified Kubernetes Application Developer (CKAD)
-              </div>
-              <div class="issuer">
-                CNCF
-              </div>
+          </section>
+          <section class="work-item">
+              <label for="work-item-2"></label>
+              <header class="clear">
+                  <div class="date">
+                    <span class="startDate">May 2019</span>
+                      <span class="endDate">- Oct 2021</span>
+                  </div>
+                <div class="position">Manager, Verified.Me Support</div>
+                  <div class="company">SecureKey Technologies Inc.</div>
+              </header>
+             <div class="item" id="work-item">
+              <div class="summary"><p><p>SecureKey is an Identity and authentication provider with Canadian Federal, Provincial Governments and Fintechs as clients and partners.</p><p>Led SecureKey's Verified.Me Identity Verification Service's Level 3 support team. Member of the engineering team tasked with implementing automation and resolving day-to-day technical challenges. Heavily contributed in technical projects ensuring timely achievement of objectives.</p></p></div>
+              <ul class="highlights">
+                <li><p><p>Started as a Level 3 Team Lead being promoted to Manager within a few months.</p></p></li>
+                <li><p><p>Involved in calls to help high value clients, addressing technical and integration issues.</p></p></li>
+                <li><p><p>Part of project management team, working through several coordinated upgrades and migrations.</p></p></li>
+                <li><p><p>Assisted developers in solving deployment related issues with docker-compose.</p></p></li>
+                <li><p><p>Converted docker-compose based local development deployment to Kubernetes compatible Kustomize deployment.</p></p></li>
+                <li><p><p>Wrote and maintained CI/CD pipelines to accelerate both test and development process, enabling faster release to Production.</p></p></li>
+                <li><p><p>Implemented CI pipelines for deployment code repositories, a stepping stone towards GitOps.</p></p></li>
+                <li><p><p>Created Analytics pipeline using only server and application logs which provided much needed visibility into user transaction flows, filling software implementation gaps. This pipeline was further utilized for troubleshooting and discovering issues within the distributed system.</p></p></li>
+                <li><p><p>Created Analytics Dashboard for Production system usage. Python code was used for extracting information from database, transforming the data to required format and exposing it via API endpoint.</p></p></li>
+              </ul>
             </div>
-    
-            <div class="date">
-              2021
+          </section>
+          <section class="work-item">
+              <label for="work-item-3"></label>
+              <header class="clear">
+                  <div class="date">
+                    <span class="startDate">Oct 2016</span>
+                      <span class="endDate">- May 2019</span>
+                  </div>
+                <div class="position">DevOps Engineer</div>
+                  <div class="company">SecureKey Technologies Inc.</div>
+              </header>
+             <div class="item" id="work-item">
+              <div class="summary"><p><p>Part of a small DevOps team tasked with developing Platform, writing Infrastructure-as-Code and configuration management; enabling deployment of SecureKey's new Blockchain based Identity Verification Service, Verified.Me.</p></p></div>
+              <ul class="highlights">
+                <li><p><p>Used tools such as Git, Terraform, Ansible, Jenkins and Docker for deployments.</p></p></li>
+                <li><p><p>Wrote and maintained Infrastructure as a Code repositories for automated deployments on both on-perm and cloud infrastructure.</p></p></li>
+                <li><p><p>Build and shipped secure Docker images to clients and partners as part of regular release process.</p></p></li>
+                <li><p><p>Assisted clients with technical issues ranging from service related as well as client's internal networking issues.</p></p></li>
+                <li><p><p>Assisted in redesigning client network architecture.</p></p></li>
+                <li><p><p>As Subject Matter Expert of Verified.Me, I was regularly consulted for L2/L3 support.</p></p></li>
+              </ul>
             </div>
-          </header>
-        </section>
-        <section class="certificate-item">
-          <label for="certificate-item-2"></label>
-          <header class="clear">
-            <div class="header-left">
-              <div class="title">
-                Certified Kubernetes Security Specialist (CKS)
-              </div>
-              <div class="issuer">
-                CNCF
-              </div>
+          </section>
+          <section class="work-item">
+              <label for="work-item-4"></label>
+              <header class="clear">
+                  <div class="date">
+                    <span class="startDate">Jun 2016</span>
+                      <span class="endDate">- Oct 2016</span>
+                  </div>
+                <div class="position">Systems Administrator</div>
+                  <div class="company">SecureKey Technologies Inc.</div>
+              </header>
+             <div class="item" id="work-item">
+              <div class="summary"><p><p>Joined as a Systems Administrator Supporting SecureKey's Government Sign-in by Verified.Me Service. After recognizing my skills and passion for automation; I was offered the role of DevOps Engineer and joined the Engineering team after 4 months being part of Production Support Team.</p></p></div>
+              <ul class="highlights">
+                <li><p><p>Day-to-Day operations and maintenance of the server infrastructure supporting cloud services with a focus on Red Hat Linux, JAVA application servers, MySQL, and VMWare ESX.</p></p></li>
+                <li><p><p>Implemented production changes in out-of-hours maintenance windows.</p></p></li>
+                <li><p><p>On-call for critical incident support on a rotational basis.</p></p></li>
+                <li><p><p>Provided input to post implementation reviews and RCAs.</p></p></li>
+                <li><p><p>Managed issues using an ITIL-compliant ticketing system.</p></p></li>
+              </ul>
             </div>
-    
-            <div class="date">
-              2022
+          </section>
+          <section class="work-item">
+              <label for="work-item-5"></label>
+              <header class="clear">
+                  <div class="date">
+                    <span class="startDate">Aug 2015</span>
+                      <span class="endDate">- Mar 2016</span>
+                  </div>
+                <div class="position">Linux Systems Engineer</div>
+                  <div class="company">Integra Technologies FZE</div>
+              </header>
+             <div class="item" id="work-item">
+              <div class="summary"><p><p>Integra Technologies is a Red Hat Advanced Partner and AWS Standard Consulting Partner that focuses on Linux based solutions for enterprises.</p><p>Part of a small team providing consultancy services to wide range of clientele such as Telecom Service Providers, Educational Institutions, Airports, Airlines, Automotive Dealerships, Food Services, and Healthcare sector.</p></p></div>
+              <ul class="highlights">
+                <li><p><p>Installed and provided support for all Red Hat products such as Red Hat Enterprise Linux, Red Hat Satellite, Red Hat High Availability Clusters.</p></p></li>
+                <li><p><p>Met with potential clients to discuss their IT enterprise needs.</p></p></li>
+                <li><p><p>Provided 24/7 on-call support to clients on daily basis.</p></p></li>
+                <li><p><p>Performed remote troubleshooting to effectively resolve technical issues faced by the clients.</p></p></li>
+                <li><p><p>Provided clients with project specifications and technical documentations.</p></p></li>
+              </ul>
             </div>
-          </header>
-        </section>
-        <section class="certificate-item">
-          <label for="certificate-item-3"></label>
-          <header class="clear">
-            <div class="header-left">
-              <div class="title">
-                Red Hat Certified Engineer (RHCE)
-              </div>
-              <div class="issuer">
-                Red Hat
-              </div>
+          </section>
+          <section class="work-item">
+              <label for="work-item-6"></label>
+              <header class="clear">
+                  <div class="date">
+                    <span class="startDate">Jul 2012</span>
+                      <span class="endDate">- Jul 2015</span>
+                  </div>
+                <div class="position">Linux System Administrator</div>
+                  <div class="company">Science and Technology Facilities Council</div>
+              </header>
+             <div class="item" id="work-item">
+              <div class="summary"><p><p>One of Europe’s largest multidisciplinary research organizations.</p><p>Part of a small but dedicated operations team administering hundreds of thousands of servers part of High Performance Computing Cluster. These resources were used within the organization and also by the wider UK academic research community including prestigious research universities.</p></p></div>
+              <ul class="highlights">
+                <li><p><p>Administered CPU and GPU RHEL based compute clusters for UK academia.</p></p></li>
+                <li><p><p>Provisioned new hardware equipment including PDUs, Servers, Network switches.</p></p></li>
+                <li><p><p>Benchmarked new High Performance Computing cluster to determine peak performance.</p></p></li>
+                <li><p><p>Handled complex tasks on daily basis, ranging from simple login issues, expired server and client certificates to more involved such as troubleshooting MTU misconfiguration on network switches.</p></p></li>
+                <li><p><p>Liaised with vendors for replacement of faulty hardware.</p></p></li>
+              </ul>
             </div>
-    
-            <div class="date">
-              2014
-            </div>
-          </header>
-        </section>
-        <section class="certificate-item">
-          <label for="certificate-item-4"></label>
-          <header class="clear">
-            <div class="header-left">
-              <div class="title">
-                Red Hat Certified Systems Administrator (RHCSA)
-              </div>
-              <div class="issuer">
-                Red Hat
-              </div>
-            </div>
-    
-            <div class="date">
-              2014
-            </div>
-          </header>
+          </section>
         </section>
       </section>
-    </section>
-
+      <section class="section">
+        <header>
+          <h2 class='section-title'>Education <span class="item-count">(1)</span></h2>
+        </header>
+      
+        <section id="education">
+          <section class="education-item">
+            <header class="clear">
+                <div class="date">
+                  <span class="startDate">Sep 2008</span>
+                    <span class="endDate">- Jul 2012</span>
+                </div>
+              <div class="header-left">
+                <div class="studyType">
+                  Bachelor of Engineering
+                </div>
+                <div class="area">
+                  Communications Engineering
+                </div>
+                <div class="institution">
+                  Coventry University
+                </div>
+              </div>
+            </header>
+      
+      
+      
+            <div class="item">
+            </div>
+          </section>
+        </section>
+      </section>
+        <section class="section">
+          <header>
+            <h2 class="section-title">Certificates</h2>
+          </header>
+          <section id="certificates">
+              <section class="certificate-item">
+                <header class="clear">
+                    <div class="date">
+                      Jul 2021
+                    </div>
+                  <div class="header-left">
+                      <div class="name">
+                        Certified Kubernetes Administrator (CKA)
+                      </div>
+                      <div class="issuer">
+                        CNCF
+                      </div>
+                  </div>
+                </header>
+      
+                <div class="item">
+                </div>
+              </section>
+              <section class="certificate-item">
+                <header class="clear">
+                    <div class="date">
+                      Jul 2021
+                    </div>
+                  <div class="header-left">
+                      <div class="name">
+                        Certified Kubernetes Application Developer (CKAD)
+                      </div>
+                      <div class="issuer">
+                        CNCF
+                      </div>
+                  </div>
+                </header>
+      
+                <div class="item">
+                </div>
+              </section>
+              <section class="certificate-item">
+                <header class="clear">
+                    <div class="date">
+                      Jul 2022
+                    </div>
+                  <div class="header-left">
+                      <div class="name">
+                        Certified Kubernetes Security Specialist (CKS)
+                      </div>
+                      <div class="issuer">
+                        CNCF
+                      </div>
+                  </div>
+                </header>
+      
+                <div class="item">
+                </div>
+              </section>
+              <section class="certificate-item">
+                <header class="clear">
+                    <div class="date">
+                      Nov 2014
+                    </div>
+                  <div class="header-left">
+                      <div class="name">
+                        Red Hat Certified Engineer (RHCE)
+                      </div>
+                      <div class="issuer">
+                        Red Hat
+                      </div>
+                  </div>
+                </header>
+      
+                <div class="item">
+                </div>
+              </section>
+              <section class="certificate-item">
+                <header class="clear">
+                    <div class="date">
+                      Nov 2014
+                    </div>
+                  <div class="header-left">
+                      <div class="name">
+                        Red Hat Certified Systems Administrator (RHCSA)
+                      </div>
+                      <div class="issuer">
+                        Red Hat
+                      </div>
+                  </div>
+                </header>
+      
+                <div class="item">
+                </div>
+              </section>
+          </section>
+        </section>
+    </div>
   </body>
 </html>
