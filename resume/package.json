@@ -6,6 +6,6 @@
   },
   "devDependencies": {
     "resume-cli": "^3.0.5",
-    "jsonresume-theme-stackoverflow": "https://github.com/ahmedsajid/jsonresume-theme-stackoverflow.git#980d0806469bf33c79cc2d866014df3d01da649d"
+    "jsonresume-theme-stackoverflow": "https://github.com/ahmedsajid/jsonresume-theme-stackoverflow.git#3f4e3e3963acf6ea5571c2c5c4c2dd43dea037e2"
   }
 }
