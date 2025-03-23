@@ -1,24 +1,18 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "meta": {
-    "theme": "stackoverflow",
     "canonical": "https://raw.githubusercontent.com/ahmedsajid/resume/main/resume.json",
-    "version": "v2.3.0",
-    "lastModified": "2024-05-05T08:00:00"
+    "version": "v3.3.0",
+    "lastModified": "2025-03-22T08:00:00"
   },
   "basics": {
     "name": "Ahmed Sajid",
-    "label": "DevOps | SRE | CKA, CKAD & CKS",
+    "label": "DevOps Engineer",
     "picture": "",
     "email": "ahmed4343@hotmail.com",
     "phone": "",
     "website": "https://ahmedsajid.io",
-    "summary": "Linux Foundation Certified Kubernetes Application Developer, Administrator and Security Specialist (3 x Kubernetes Certified) with 12 years of experience in Tech, working with Web Servers, Mail Systems, High Performance Computing Clusters, Blockchain and AI/ML, with passion for automation and Open Source technologies.",
-    "location": {
-      "city": "Greater Toronto Area (GTA)",
-      "countryCode": "CA",
-      "region": "Ontario"
-    },
+    "summary": "Linux Foundation Certified Kubernetes Application Developer, Administrator and Security Specialist (3 x Kubernetes Certified) with 13 years of experience in Tech, working with Web Servers, Mail Systems, High Performance Computing Clusters, Blockchain and AI/ML, with passion for automation and Open Source technologies.",
     "profiles": [
       {
         "network": "GitHub",
@@ -29,20 +23,20 @@
   },
   "work": [
     {
-      "summary": "Wonolo Inc. is SaaS company, providing a two-sided tech marketplace connecting companies with workers. The platform helps worker find flexible work based on their schedule.\nPart of a small CloudOps team using IaC and DevOps approach in supporting Wonolo's AWS Infrastructure. The role also involves working with closely with several internal teams, providing technical support in resolving critical business challenges.",
+      "summary": "Wonolo Inc. is SaaS company, providing a two-sided tech marketplace connecting companies with workers. The platform helps worker find flexible work based on their schedule.\nSolo Cloud engineer maintaining Wonolo's AWS Infrastructure. The role also involves working with closely with several internal teams, providing technical support in resolving critical business challenges.",
       "position": "Senior DevOps Engineer",
       "startDate": "2022-03-22",
       "highlights": [
-        "Migrated Wonolo's Configuration management system from Chef to Ansible. Wrote the Packer Build AMI for creating base images which included running Ansible using `ansible-pull` method. Later worked on writing Ansible Roles for deployment of Buildkite Agents and OpenTelemetry Collector including Molecule testing framework and goss.rocks server validation tooling. Performed migration in production environment with no customer impact while ensuring stability of existing platform.",
-        "Improved Buildkite CI build time by deploying AWS Lambda functions to manage queues and workload. Previous to this change, Autoscaling was configured based on CPU utilization, which meant until the threshold was met, scale-out even didn't take place causing long wait times of sometimes up to 5 minutes. With the Lambda functions deployed, wait time was cut down to 45 second on average. This reduction in wait times resulted in quicker builds, which provided quicker deployments to production.",
-        "Upgraded Wonolo's SaaS Platform AWS Aurora PostgresSQL DB upgrade from 10 to 14. This require months of testing to ensure that the critical Production database upgrade goes smoothly, the data corruption wouldn't occur and the application still worked with the newer version of PostgresSQL engine.",
-        "Created new and existing AWS resources using Terraform. Regularly worked on writing Terraform code for AWS LBs, Lambdas, Autoscaling groups, Launch Templates, Security Groups, RDS, EC2, Translation, Cloudwatch, etc.",
+        "<b>Migrated Wonolo's EC2 instance platform from x86 architecture EC2 instances to Graviton instances</b> for cost saving measures. The project involved writing a <b>custom Buildkite plugin</b> to facilitate multi-architecture builds which were crucial to seamless migration. And then over the course of few weeks, updated Autoscaling groups from lower environments all the way to Production without any customer impact.",
+        "Migrated Wonolo's <b>Configuration management system from Chef to Ansible</b>. Wrote the <b>Packer Build</b> AMI for creating base images which included running Ansible using `ansible-pull` method. Later worked on writing Ansible Roles for deployment of Buildkite Agents and OpenTelemetry Collector including Molecule testing framework and goss.rocks server validation tooling. Performed migration in production environment with no customer impact while ensuring stability of existing platform.",
+        "<b>Improved Buildkite CI build time by deploying AWS Lambda functions</b> to manage queues and workload. Previous to this change, Autoscaling was configured based on CPU utilization, which meant until the threshold was met, scale-out even didn't take place causing long wait times of sometimes up to 5 minutes. With the Lambda functions deployed, wait time was cut down to 45 second on average. This reduction in wait times resulted in quicker builds, which provided quicker deployments to production.",
+        "Upgraded Wonolo's SaaS Platform <b>AWS Aurora PostgresSQL DB upgrade from 10 to 14</b>. This require months of testing to ensure that the critical Production database upgrade goes smoothly, the data corruption wouldn't occur and the application still worked with the newer version of PostgresSQL engine.",
         "As a cost saving measure, worked to remove older generation EC2 instances from terraform deployments. Moved DB clusters to AWS Graviton instances, taking advantage of better price performance. Also, eliminated the need for AWS Data Migration Service for syncing production data to lower environment by switching to `pgsync` an open source tool which could be run on existing infrastructure at no additional cost.",
-        "Performed several AWS Account migration of Wonolo acquired businesses. This includes moving services like AWS S3, Athena and MongoDB to Wonolo managed accounts. As part of this effort, also worked on migrating Git repositories from gitlab.com to github.com.",
+        "Performed several <b>AWS Account migration of Wonolo acquired businesses</b>. This includes moving services like AWS S3, <b>Athena</b> and MongoDB to Wonolo managed accounts. As part of this effort, also worked on migrating Git repositories from gitlab.com to github.com.",
         "Wonolo utilizes AWS EC2 spot instances for running production workload to keep infrastructure costs low. The production workload runs on HashiCorp Nomad which has issues with handling EC2 spot interruptions where AWS terminates the instances when their platform needs capacity. I wrote a custom spot interruption handler to ensure that when spot interruption notice was issues, Nomad worker was cordoned to avoid scheduling workload on the node providing a graceful termination scenario. This custom handler queried AWS EC2 Metadata endpoint to determine termination time, and if one was provided the node was set to be ineligible to run any new workload while draining existing workload avoiding sudden loss in workload capacity.",
-        "Improved overall monitoring posture by integration CloudWatch for sending Slack and OnCall alerts for critical resources. Also setup metrics and dashboard in Grafana for AWS resources and CI."
+        "Improved overall monitoring posture by integration <b>CloudWatch</b> for sending Slack and OnCall alerts for critical resources. Also setup metrics and dashboard in <b>Grafana</b> for AWS resources and CI."
       ],
-      "name": "Wonolo Inc."
+      "company": "Wonolo Inc."
     },
     {
       "summary": "Kira Systems is a SaaS provider, with world's largest law firms and corporations as their clients, providing Artificial Intelligence and Machine Learning, helping in understanding the contents of their legal documents.\nPart of the Core Operations team supporting both Development and Production workloads. Working closely with internal teams, providing engineering support on demand.",
@@ -50,33 +44,33 @@
       "startDate": "2021-10-18",
       "endDate": "2022-03-18",
       "highlights": [
-        "Maintained Infrastructure as Code deployments for Development environments and supporting services.",
-        "Increased observability of critical development infrastructure using Prometheus/Alertmanager, ensuring development teams remain focus on high business value task.",
+        "<b>Maintained Infrastructure as Code deployments for Development environments</b> and supporting services.",
+        "Increased observability of critical development infrastructure using <b>Prometheus</b> and <b>Alertmanager</b>, ensuring development teams remain focus on high business value task.",
         "Updated Jenkins Infrastructure and CI pipelines to decrease build failures and provide higher reliability.",
-        "Reduced CI build time in Jenkins for the main monorepo, consisting of 80 plus individual components, from 1 hour 40 minutes to 58 minutes by simply rewriting the pipeline running parallel batches building interdependent components to fully parallelized locking based approach. This ensured that compute resources were utilized for the maximum amount of time, while reducing CI build time by 40%, accelerating software development cycle resulting in faster releases to production.",
+        "<b>Reduced CI build time in Jenkins</b> for the main monorepo, consisting of 80 plus individual components, <b>from 1 hour 40 minutes to 58 minutes</b> by simply rewriting the pipeline running parallel batches building interdependent components to fully parallelized locking based approach. This ensured that compute resources were utilized for the maximum amount of time, while reducing CI build time by 40%, accelerating software development cycle resulting in faster releases to production.",
         "Spearheaded several initiatives successfully to reduce technical debt.",
         "Wrote Github Action automation bots in Python for development CI process to enforcing security requirements.",
         "As the senior team member, provided technical assistance to members regularly."
       ],
-      "name": "Kira Systems Inc."
+      "company": "Kira Systems Inc."
     },
     {
       "endDate": "2021-10-06",
       "summary": "SecureKey is an Identity and authentication provider with Canadian Federal, Provincial Governments and Fintechs as clients and partners.\nLed SecureKey's Verified.Me Identity Verification Service's Level 3 support team. Member of the engineering team tasked with implementing automation and resolving day-to-day technical challenges. Heavily contributed in technical projects ensuring timely achievement of objectives.",
-      "position": "Manager, Verified.Me Support",
+      "position": "Engineering Manager",
       "startDate": "2019-05-31",
       "highlights": [
         "Started as a Level 3 Team Lead being promoted to Manager within a few months.",
         "Involved in calls to help high value clients, addressing technical and integration issues.",
         "Part of project management team, working through several coordinated upgrades and migrations.",
         "Assisted developers in solving deployment related issues with docker-compose.",
-        "Converted docker-compose based local development deployment to Kubernetes compatible Kustomize deployment.",
+        "<b>Converted docker-compose</b> based local development deployment to <b>Kubernetes compatible Kustomize deployment</b>.",
         "Wrote and maintained CI/CD pipelines to accelerate both test and development process, enabling faster release to Production.",
-        "Implemented CI pipelines for deployment code repositories, a stepping stone towards GitOps.",
+        "<b>Implemented CI pipelines for deployment code</b> repositories, a stepping stone towards <b>GitOps</b>.",
         "Created Analytics pipeline using only server and application logs which provided much needed visibility into user transaction flows, filling software implementation gaps. This pipeline was further utilized for troubleshooting and discovering issues within the distributed system.",
-        "Created Analytics Dashboard for Production system usage. Python code was used for extracting information from database, transforming the data to required format and exposing it via API endpoint."
+        "Created <b>Analytics Dashboard for Production system usage</b>. Python code was used for extracting information from database, transforming the data to required format and exposing it via API endpoint."
       ],
-      "name": "SecureKey Technologies Inc."
+      "company": "SecureKey Technologies Inc."
     },
     {
       "endDate": "2019-05-31",
@@ -84,14 +78,14 @@
       "position": "DevOps Engineer",
       "startDate": "2016-10-31",
       "highlights": [
-        "Used tools such as Git, Terraform, Ansible, Jenkins and Docker for deployments.",
+        "Used tools such as <b>Git, Terraform, Ansible, Jenkins and Docker for deployments</b>.",
         "Wrote and maintained Infrastructure as a Code repositories for automated deployments on both on-perm and cloud infrastructure.",
-        "Build and shipped secure Docker images to clients and partners as part of regular release process.",
+        "<b>Build and shipped secure Docker images</b> to clients and partners as part of regular release process.",
         "Assisted clients with technical issues ranging from service related as well as client's internal networking issues.",
         "Assisted in redesigning client network architecture.",
         "As Subject Matter Expert of Verified.Me, I was regularly consulted for L2/L3 support."
       ],
-      "name": "SecureKey Technologies Inc."
+      "company": "SecureKey Technologies Inc."
     },
     {
       "endDate": "2016-10-31",
@@ -99,13 +93,13 @@
       "position": "Systems Administrator",
       "startDate": "2016-06-06",
       "highlights": [
-        "Day-to-Day operations and maintenance of the server infrastructure supporting cloud services with a focus on Red Hat Linux, JAVA application servers, MySQL, and VMWare ESX.",
-        "Implemented production changes in out-of-hours maintenance windows.",
-        "On-call for critical incident support on a rotational basis.",
+        "Day-to-Day operations and maintenance of the server infrastructure supporting cloud services with a focus on <b>Red Hat Linux</b>, <b>JAVA</b> application servers, <b>MySQL</b>, and <b>VMWare ESX</b>.",
+        "<b>Implemented production changes</b> in out-of-hours maintenance windows.",
+        "<b>On-call for critical incident support</b> on a rotational basis.",
         "Provided input to post implementation reviews and RCAs.",
-        "Managed issues using an ITIL-compliant ticketing system."
+        "Managed issues using an <b>ITIL-compliant ticketing system</b>."
       ],
-      "name": "SecureKey Technologies Inc."
+      "company": "SecureKey Technologies Inc."
     },
     {
       "endDate": "2016-03-31",
@@ -113,13 +107,13 @@
       "position": "Linux Systems Engineer",
       "startDate": "2015-08-31",
       "highlights": [
-        "Installed and provided support for all Red Hat products such as Red Hat Enterprise Linux, Red Hat Satellite, Red Hat High Availability Clusters.",
+        "Installed and provided support for all Red Hat products such as <b>Red Hat Enterprise Linux</b>, <b>Red Hat Satellite</b>, <b>Red Hat High Availability Clusters</b>.",
         "Met with potential clients to discuss their IT enterprise needs.",
-        "Provided 24/7 on-call support to clients on daily basis.",
-        "Performed remote troubleshooting to effectively resolve technical issues faced by the clients.",
-        "Provided clients with project specifications and technical documentations."
+        "Provided 24/7 <b>on-call</b> support to clients.",
+        "Performed <b>remote troubleshooting</b> to effectively resolve technical issues faced by the clients.",
+        "Provided clients with <b>project specifications</b> and <b>technical documentations</b>."
       ],
-      "name": "Integra Technologies FZE"
+      "company": "Integra Technologies FZE"
     },
     {
       "endDate": "2015-07-31",
@@ -127,13 +121,13 @@
       "startDate": "2012-07-31",
       "summary": "One of Europe’s largest multidisciplinary research organizations.\nPart of a small but dedicated operations team administering hundreds of thousands of servers part of High Performance Computing Cluster. These resources were used within the organization and also by the wider UK academic research community including prestigious research universities.",
       "highlights": [
-        "Administered CPU and GPU RHEL based compute clusters for UK academia.",
-        "Provisioned new hardware equipment including PDUs, Servers, Network switches.",
-        "Benchmarked new High Performance Computing cluster to determine peak performance.",
+        "Administered <b>CPU and GPU RHEL based High Performance Computing clusters for UK academia</b>.",
+        "<b>Provisioned new hardware equipment</b> including PDUs, Servers, Network switches.",
+        "<b>Benchmarked new High Performance Computing cluster</b> to determine peak performance.",
         "Handled complex tasks on daily basis, ranging from simple login issues, expired server and client certificates to more involved such as troubleshooting MTU misconfiguration on network switches.",
-        "Liaised with vendors for replacement of faulty hardware."
+        "<b>Liaised with vendors</b> for replacement of faulty hardware."
       ],
-      "name": "Science and Technology Facilities Council"
+      "company": "Science and Technology Facilities Council"
     }
   ],
   "volunteer": [],
@@ -175,6 +169,7 @@
       "level": "",
       "keywords": [
         "AWS",
+        "GCP",
         "DigitalOcean"
       ]
     },
@@ -184,6 +179,7 @@
       "keywords": [
         "Docker",
         "Kubernetes",
+        "EKS",
         "Nomad",
         "Consul"
       ]
@@ -192,21 +188,19 @@
       "name": "Scripting",
       "level": "",
       "keywords": [
-        "BASH",
         "Python",
+        "BASH",
         "Groovy"
       ]
     },
     {
-      "name": "CI and Build Tools",
+      "name": "CI/CD",
       "level": "",
       "keywords": [
         "Jenkins",
         "Github Actions",
         "Buildkite",
-        "Bazel",
-        "Make",
-        "CMake"
+        "Make"
       ]
     },
     {
@@ -215,7 +209,7 @@
       "keywords": [
         "RHEL",
         "CentOS",
-        "Ubuntu Desktop",
+        "Ubuntu",
         "Rocky Linux"
       ]
     },
@@ -223,8 +217,9 @@
       "name": "Databases",
       "level": "",
       "keywords": [
-        "PostgreSQL",
-        "MySQL"
+        "PostgresSQL",
+        "RDS",
+        "CloudSQL"
       ]
     },
     {
@@ -234,7 +229,8 @@
         "NGiNX",
         "Apache HTTPD",
         "Caddy Server",
-        "Fabio"
+        "Fabio",
+        "Traefik"
       ]
     },
     {
@@ -280,6 +276,8 @@
       "name": "Artifact Repositories",
       "level": "",
       "keywords": [
+        "Docker Registry",
+        "AWS ECR",
         "Jfrog Artifactory",
         "Nexus"
       ]
