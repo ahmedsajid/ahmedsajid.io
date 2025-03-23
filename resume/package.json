@@ -1,11 +1,13 @@
 {
   "scripts": {
     "validate": "resume validate",
-    "build:pdf": "resume export --theme stackoverflow resume.pdf",
-    "build:html": "resume export --theme stackoverflow index.html"
+    "build:pdf": "resume export --theme engineering resume.pdf",
+    "build:html": "resume export --theme engineering index.html"
   },
   "devDependencies": {
     "resume-cli": "^3.0.5",
-    "jsonresume-theme-stackoverflow": "https://github.com/ahmedsajid/jsonresume-theme-stackoverflow.git#3f4e3e3963acf6ea5571c2c5c4c2dd43dea037e2"
+    "jsonresume-theme-stackoverflow": "https://github.com/ahmedsajid/jsonresume-theme-stackoverflow.git#3f4e3e3963acf6ea5571c2c5c4c2dd43dea037e2",
+    "jsonresume-theme-dev-ats": "https://github.com/asqrzk/jsonresume-theme-dev-ats.git#8646f09673e801ebc484e7454762628c8e213a0e",
+    "jsonresume-theme-engineering": "https://github.com/ahmedsajid/jsonresume-theme-engineering.git#e1291d5d0c755abf859efd02acd0eef968dbf34b"
   }
 }
